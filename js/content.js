@@ -94,6 +94,7 @@ window.CONTENT = {
       "title": "🍊 팀별 미션: 제주 30초 릴스 챌린지",
       "location": "함덕해수욕장",
       "mapUrl": "https://maps.app.goo.gl/hFWAgnnEghWwNSpE9",
+      "voteUrl": "https://www.cheesebutton.io/vote/issue-election/6a6af4117e728ddcda48795c/intro",
       "description": "팀별로 \"제주\"를 주제로 한 30초 릴스를 제작해 주세요. 표현 방식은 팀의 자유입니다. 정답은 없습니다 — 우리 팀만의 색깔을 보여주세요! \n기본 규칙\n- 주제(키워드): 제주(장소, 음식, 방언, 자연, 사람 등 무엇이든 OK)\n- 영상 길이: 30초 내외\n- 촬영 장소·소품·음악: 자유\n- 팀원 전원 1회 이상 등장 필수\n\n**영상은 조별 대표 1명이 아래 '사진업로드' 메뉴에서 올려주세요!",
       "travelTimeToNext": "도보 이동 약 5분",
       "difficulty": null,
