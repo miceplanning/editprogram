@@ -29,10 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ---------------- 빠른 메뉴 ----------------
   const hasUploadItems = !!(c.schedule && c.schedule.some((s) => s.photoUpload && s.photoUpload.enabled));
+  const hasVoteItems = !!(c.schedule && c.schedule.some((s) => s.voteUrl));
   const quickMenuItems = [
     '<a href="schedule.html"><span class="icon">🗓️</span>일정</a>',
     sectionOn("flight") ? '<a href="flight.html"><span class="icon">✈️</span>항공권</a>' : "",
     hasUploadItems ? '<a href="upload.html"><span class="icon">📸</span>사진업로드</a>' : "",
+    hasVoteItems ? '<a href="vote.html"><span class="icon">🗳️</span>투표</a>' : "",
     '<a href="location.html"><span class="icon">🗺️</span>오시는길</a>',
     sectionOn("faq") ? '<a href="faq.html"><span class="icon">❓</span>FAQ</a>' : "",
     sectionOn("survey") ? '<a href="survey.html"><span class="icon">📝</span>설문조사</a>' : ""

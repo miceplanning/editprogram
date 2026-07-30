@@ -101,14 +101,16 @@ function renderLayout(activePage) {
   // --- 4) 하단 탭 네비게이션 ---
   const nav = document.createElement("nav");
   nav.id = "bottom-nav";
-  // "사진업로드" 탭은 업로드를 받는 활동이 하나라도 있을 때만 보여줍니다.
+  // "사진업로드"/"투표" 탭은 각각 해당하는 활동이 하나라도 있을 때만 보여줍니다.
   const hasUploadItems = !!(c.schedule && c.schedule.some((s) => s.photoUpload && s.photoUpload.enabled));
+  const hasVoteItems = !!(c.schedule && c.schedule.some((s) => s.voteUrl));
 
   const tabs = [
     { key: "home", href: "index.html", icon: "🏠", label: "홈" },
     { key: "schedule", href: "schedule.html", icon: "🗓️", label: "일정" },
     { key: "flight", href: "flight.html", icon: "✈️", label: "항공권", sectionKey: "flight" },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },
+    { key: "vote", href: "vote.html", icon: "🗳️", label: "투표", show: hasVoteItems },
     { key: "location", href: "location.html", icon: "🗺️", label: "오시는길" },
     { key: "faq", href: "faq.html", icon: "❓", label: "FAQ", sectionKey: "faq" },
     { key: "survey", href: "survey.html", icon: "📝", label: "설문", sectionKey: "survey" }

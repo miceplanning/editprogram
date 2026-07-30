@@ -66,10 +66,6 @@ function buildUploadCard(item) {
       : '<div class="upload-viewer-note">업로드된 파일이 여기에 모여서 보일 예정입니다.</div>';
   }
 
-  if (item.voteUrl) {
-    html += '<a class="btn btn-map upload-vote-link" href="' + escapeHtml(item.voteUrl) + '" target="_blank" rel="noopener noreferrer">🗳️ 투표하러 가기</a>';
-  }
-
   wrap.innerHTML = html;
   return wrap;
 }
