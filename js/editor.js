@@ -37,7 +37,7 @@ function withDefaults(src) {
     heroImage: src.heroImage || "",
     heroTagline: src.heroTagline || "",
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -629,7 +629,8 @@ function buildExportObject() {
       checklist: !!state.sectionsEnabled.checklist,
       faq: !!state.sectionsEnabled.faq,
       survey: !!state.sectionsEnabled.survey,
-      flight: !!state.sectionsEnabled.flight
+      flight: !!state.sectionsEnabled.flight,
+      location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
     heroTagline: state.heroTagline,

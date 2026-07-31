@@ -111,7 +111,7 @@ function renderLayout(activePage) {
     { key: "flight", href: "flight.html", icon: "✈️", label: "항공권", sectionKey: "flight" },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },
     { key: "vote", href: "vote.html", icon: "🗳️", label: "투표", show: hasVoteItems },
-    { key: "location", href: "location.html", icon: "🗺️", label: "오시는길" },
+    { key: "location", href: "location.html", icon: "🗺️", label: "오시는길", sectionKey: "location" },
     { key: "faq", href: "faq.html", icon: "❓", label: "FAQ", sectionKey: "faq" },
     { key: "survey", href: "survey.html", icon: "📝", label: "설문", sectionKey: "survey" }
   ].filter((t) => t.show !== false && (!t.sectionKey || (c.sectionsEnabled && c.sectionsEnabled[t.sectionKey]) !== false));
