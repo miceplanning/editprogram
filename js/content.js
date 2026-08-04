@@ -24,7 +24,7 @@ window.CONTENT = {
     "location": false
   },
   "heroImage": "",
-  "heroTagline": "제주 맥주 도슨트 투어(수정)",
+  "heroTagline": "제주 맥주 도슨트 투어 + 현대미술관 전시 관람 + 여름 실내",
   "notice": {
     "active": false,
     "text": ""
