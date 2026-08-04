@@ -279,7 +279,7 @@ main {
   display: flex;
   align-items: flex-end;
 }
-.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 78%; }
 .hero .hero-text {
   position: relative;
   z-index: 1;
