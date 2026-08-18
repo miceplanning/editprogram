@@ -85,7 +85,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "images/사찰 안내.jpg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -109,7 +109,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "images/스님과의 대화.jpg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -133,7 +133,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/돈사무소.png",
+      "photo": "images/저녁공양.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",

@@ -247,6 +247,7 @@ Node.js나 별도 빌드 과정 없이 동작하는 순수 HTML/CSS/JS 정적 �
 ## ✅ 행사 전 최종 체크리스트
 
 - [ ] `content.js`의 `eventName`, `date`, `dateDisplay` 확인
+- [ ] `index.html` `<head>`의 `og:title`/`og:description`/`og:image` 3줄을 `eventName`/`heroTagline`/`heroImage`와 같은 값으로 수정 (카카오톡 공유 미리보기용 — 자동 반영 안 됨)
 - [ ] `notice.active`를 상황에 맞게 켜고(true) 문구 확인
 - [ ] `contact` (담당자 이름/전화번호) 최신 정보로 수정
 - [ ] `schedule` 배열의 시간/장소/지도 링크(`mapUrl`) 실제 주소로 확인

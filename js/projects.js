@@ -41,9 +41,26 @@ function renderProjectList() {
       "</div>" +
       '<div class="project-actions">' +
       '<a class="project-open" href="editor.html?project=' + encodeURIComponent(p.id) + '">열기</a>' +
+      '<button type="button" class="project-rename" data-id="' + p.id + '">이름변경</button>' +
       '<button type="button" class="project-delete" data-id="' + p.id + '">삭제</button>' +
       "</div>";
     root.appendChild(card);
+  });
+
+  root.querySelectorAll(".project-rename").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.id;
+      const meta = projects.find((p) => p.id === id);
+      const current = meta && meta.label !== "(제목 없음)" ? meta.label : "";
+      const input = prompt("프로젝트 이름을 입력하세요 (실제 사이트의 행사명으로 저장됩니다):", current);
+      if (input === null) return;
+      const name = input.trim();
+      if (!name) return;
+      const content = getProjectContent(id) || {};
+      content.eventName = name;
+      saveProjectContent(id, content);
+      renderProjectList();
+    });
   });
 
   root.querySelectorAll(".project-delete").forEach((btn) => {

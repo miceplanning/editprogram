@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const c = window.CONTENT;
   const root = document.getElementById("home-content");
 
+  // 브라우저 탭 제목은 content.js의 eventName과 자동으로 맞춥니다.
+  // (카카오톡 공유 미리보기는 JS를 실행하지 않으므로 index.html의 og:title은 별도로 수정해야 합니다)
+  if (c.eventName) document.title = c.eventName;
+
   // 이번 회차에 해당 섹션을 쓰는지 확인 (sectionsEnabled에 값이 없으면 기본적으로 사용함)
   function sectionOn(key) {
     return !(c.sectionsEnabled && c.sectionsEnabled[key] === false);
