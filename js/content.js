@@ -122,7 +122,31 @@ window.CONTENT = {
       "id": 4,
       "date": "2026-08-27",
       "time": "17:00",
-      "endTime": "18:00",
+      "endTime": "17:50",
+      "title": "자유시간",
+      "location": "약천사",
+      "mapUrl": "",
+      "voteUrl": "",
+      "description": "",
+      "travelTimeToNext": null,
+      "difficulty": null,
+      "distance": null,
+      "meal": null,
+      "freeTimeRecommendation": null,
+      "photo": null,
+      "photoUpload": {
+        "enabled": false,
+        "formUrl": "",
+        "driveFolderUrl": "",
+        "description": "",
+        "showGallery": false
+      }
+    },
+    {
+      "id": 5,
+      "date": "2026-08-27",
+      "time": "17:50",
+      "endTime": "18:30",
       "title": "저녁 공양",
       "location": "약천사",
       "mapUrl": "",
@@ -143,7 +167,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "date": "2026-08-27",
       "time": "19:00",
       "endTime": "19:10",
