@@ -9,10 +9,10 @@
 */
 
 window.CONTENT = {
-  "eventName": "2026 드림투어 30회차",
+  "eventName": "2026 드림투어 31회차",
   "eventSubtitle": "제주 드림투어",
-  "date": "2026-08-27",
-  "dateDisplay": "2026년 8월 27일(목)",
+  "date": "2026-09-10",
+  "dateDisplay": "2026년 9월 10일(목)",
   "sectionsEnabled": {
     "rainPlan": false,
     "staff": false,
@@ -24,7 +24,7 @@ window.CONTENT = {
     "location": false
   },
   "heroImage": "images/드림타워 메인사진.jpg",
-  "heroTagline": "잠시 머리를 비우며 조용한 사찰에서 나를 배우는 시간",
+  "heroTagline": "일일 해녀로 살아보기",
   "notice": {
     "active": false,
     "text": ""
@@ -48,7 +48,7 @@ window.CONTENT = {
   "schedule": [
     {
       "id": 1,
-      "date": "2026-08-27",
+      "date": "2026-09-10",
       "time": "13:00",
       "endTime": "13:30",
       "title": "드림타워 버스 주차장 집결",
@@ -56,7 +56,7 @@ window.CONTENT = {
       "mapUrl": "https://maps.app.goo.gl/Tp2Mm5dz4Z3jKfdQ7",
       "voteUrl": "",
       "description": "출발 전 명단 확인 및 인원 점검을 진행합니다. 늦어도 **13시 20분**까지는 도착해주세요.",
-      "travelTimeToNext": "버스 이동 약 60분",
+      "travelTimeToNext": "버스 이동 약 40분",
       "difficulty": null,
       "distance": null,
       "meal": null,
@@ -72,12 +72,12 @@ window.CONTENT = {
     },
     {
       "id": 2,
-      "date": "2026-08-27",
+      "date": "2026-09-10",
       "time": "14:30",
-      "endTime": "16:00",
-      "title": "사찰 예절 및 사찰 안내",
-      "location": "약천사",
-      "mapUrl": "https://maps.app.goo.gl/SAFTp811zy657L2N8",
+      "endTime": "15:00",
+      "title": "해녀 공연 관람",
+      "location": "귀덕리 한수풀해녀학교",
+      "mapUrl": "",
       "voteUrl": "",
       "description": "",
       "travelTimeToNext": null,
@@ -85,7 +85,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/사찰 안내.jpg",
+      "photo": "images/해녀공연.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -96,11 +96,11 @@ window.CONTENT = {
     },
     {
       "id": 3,
-      "date": "2026-08-27",
-      "time": "16:00",
-      "endTime": "16:30",
-      "title": "108염주 및 스님과의 대화시간",
-      "location": "약천사",
+      "date": "2026-09-10",
+      "time": "15:00",
+      "endTime": "17:00",
+      "title": "해녀 물질 체험 or 해녀 테왁 만들기(선택)",
+      "location": "귀덕리 한수풀해녀학교",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -109,7 +109,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/스님과의 대화.jpg",
+      "photo": "images/해녀체험.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -120,12 +120,12 @@ window.CONTENT = {
     },
     {
       "id": 4,
-      "date": "2026-08-27",
-      "time": "16:40",
-      "endTime": "17:30",
-      "title": "108배 체험",
-      "location": "약천사",
-      "mapUrl": "",
+      "date": "2026-09-10",
+      "time": "17:00",
+      "endTime": "18:00",
+      "title": "저녁식사",
+      "location": "활어왕",
+      "mapUrl": "https://maps.app.goo.gl/JLbMe7RN1CPWYGec7",
       "voteUrl": "",
       "description": "",
       "travelTimeToNext": null,
@@ -144,33 +144,9 @@ window.CONTENT = {
     },
     {
       "id": 5,
-      "date": "2026-08-27",
-      "time": "17:50",
-      "endTime": "18:20",
-      "title": "저녁 공양",
-      "location": "약천사",
-      "mapUrl": "",
-      "voteUrl": "",
-      "description": "",
-      "travelTimeToNext": "버스 이동 약 60분",
-      "difficulty": null,
-      "distance": null,
-      "meal": null,
-      "freeTimeRecommendation": null,
-      "photo": "images/저녁공양.png",
-      "photoUpload": {
-        "enabled": false,
-        "formUrl": "",
-        "driveFolderUrl": "",
-        "description": "",
-        "showGallery": false
-      }
-    },
-    {
-      "id": 6,
-      "date": "2026-08-27",
-      "time": "18:20",
-      "endTime": "19:10",
+      "date": "2026-09-10",
+      "time": "18:00",
+      "endTime": "19:00",
       "title": "드림타워 도착 및 해산",
       "location": "드림타워 주차장",
       "mapUrl": "",
@@ -205,7 +181,7 @@ window.CONTENT = {
     }
   ],
   "survey": {
-    "url": "https://forms.gle/RaedBF3yUT4HNGoP8",
+    "url": "https://forms.gle/hxmhMJAiCxqmGprG9",
     "duration": ""
   },
   "flight": {
