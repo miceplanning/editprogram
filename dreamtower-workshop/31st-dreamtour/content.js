@@ -157,7 +157,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "../../images/테왁만들기.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
