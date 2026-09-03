@@ -1,0 +1,56 @@
+/* =====================================================================
+   행사 아카이브(archive.html) 전용 스타일
+   - editor.css의 색상/카드 톤을 그대로 재사용합니다.
+   ===================================================================== */
+
+.archive-main { padding-top: 24px; }
+
+.archive-org { margin-bottom: 28px; }
+.archive-org-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--color-border);
+}
+
+.archive-event-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .archive-event-list { grid-template-columns: 1fr 1fr; }
+}
+
+.archive-event-card {
+  display: block;
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+.archive-event-name {
+  font-weight: 800;
+  font-size: 14.5px;
+  color: var(--color-text);
+}
+.archive-event-meta {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-top: 4px;
+}
+
+.archive-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 28px 20px;
+  color: var(--color-muted);
+  font-size: 13px;
+  background: var(--color-card);
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}

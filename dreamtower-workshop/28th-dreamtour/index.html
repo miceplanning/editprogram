@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title id="og-title-tab">2026 드림투어 28회차</title>
+<meta name="description" content="행사 당일 안내 페이지 - 일정, 오시는 길, FAQ, 설문조사" />
+
+<!--
+  카카오톡/문자 등에 사이트 링크를 공유했을 때 뜨는 미리보기 제목/설명/이미지입니다.
+  카카오톡 미리보기 봇은 자바스크립트를 실행하지 않고 이 아래 태그만 읽기 때문에,
+  content.js의 eventName / heroTagline / heroImage 값을 바꿨다면 이 3줄도 반드시
+  같은 값으로 함께 수정한 뒤 배포해주세요 (editor.html에서 자동으로 반영되지 않습니다).
+-->
+<meta property="og:title" content="2026 드림투어 28회차" />
+<meta property="og:description" content="시원한 바다에서 여름나기 프로젝트!" />
+<meta property="og:image" content="https://miceplanning.github.io/editprogram/images/%ED%95%A8%EB%8D%95%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5-%EB%A9%94%EC%9D%B8-%EC%82%AC%EC%A7%84.png" />
+<meta property="og:type" content="website" />
+
+<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<!-- data-page 속성으로 현재 페이지를 표시합니다 (하단 탭 메뉴 활성화 표시에 사용) -->
+<body data-page="home">
+
+  <main>
+    <div class="container" id="home-content">
+      <!-- home.js 가 이 안에 콘텐츠를 채워 넣습니다 -->
+    </div>
+  </main>
+
+  <!-- 콘텐츠 데이터 -> 공통 레이아웃 -> 홈 페이지 렌더링 순서로 불러옵니다 -->
+  <script src="content.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/home.js"></script>
+</body>
+</html>
