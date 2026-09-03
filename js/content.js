@@ -26,8 +26,8 @@ window.CONTENT = {
   "heroImage": "images/드림타워 메인사진.jpg",
   "heroTagline": "일일 해녀로 살아보기",
   "notice": {
-    "active": false,
-    "text": ""
+    "active": true,
+    "text": "해녀 물질 체험 참여자는 샤워도구(샴푸, 린스, 바디워시), 수건, 슬리퍼를 꼭 챙겨주세요!"
   },
   "rainPlan": {
     "hasIndoorAlternative": false,
