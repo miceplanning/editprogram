@@ -23,7 +23,7 @@ window.CONTENT = {
     "flight": false,
     "location": false
   },
-  "heroImage": "../../images/드림타워 메인사진.jpg",
+  "heroImage": "../../images/해녀공연.png",
   "heroTagline": "일일 해녀로 살아보기",
   "notice": {
     "active": true,
