@@ -102,7 +102,7 @@ window.CONTENT = {
       "title": "해녀와 함께하는 포토 미션",
       "location": "귀덕리 한수풀해녀학교",
       "mapUrl": "",
-      "voteUrl": "https://forms.gle/BNrvBgntMif5gvBX7",
+      "voteUrl": "",
       "description": "① 제주 해녀 알아보기\n제주 해녀 삼춘과 함께 해녀의 역사와 문화, 물질 활동에 대한 이야기를 들어보는 시간입니다. 해녀들이 실제로 사용하는 물질 도구와 생활 모습을 살펴보며 제주 해녀 문화에 대해 쉽고 재미있게 이해합니다. \n\n② 미니 테왁 만들기\n해녀들이 물질을 할 때 사용하는 ‘테왁’을 모티브로 나만의 미니 테왁을 만들어보는 체험입니다. \n\n③ 해녀 삼춘과 함께하는 팀별 포토 미션\n완성한 미니 테왁을 비롯해 해녀 삼춘이 준비한 다양한 해녀 물품 및 소품을 활용하여 팀별로 우리 팀만의 개성이 담긴 사진을 촬영합니다. 해녀 삼춘과 함께 포즈와 콘셉트를 자유롭게 구성하여 팀별로 사진 한 장을 제출합니다. \n\n④ 우리 팀의 해녀 이야기 발표 & 시상\n촬영한 사진을 바탕으로 각 팀의 콘셉트와 아이디어를 간단하게 발표합니다. 창의성, 팀워크, 재미, 해녀 문화 표현력 등을 기준으로 우수팀을 선정하며, 1등 팀 전원에게는 특별한 선물이 제공됩니다!",
       "travelTimeToNext": null,
       "difficulty": null,
@@ -112,7 +112,7 @@ window.CONTENT = {
       "photo": "images/테왁만들기.png",
       "photoUpload": {
         "enabled": true,
-        "formUrl": "",
+        "formUrl": "https://forms.gle/BNrvBgntMif5gvBX7",
         "driveFolderUrl": "",
         "description": "이 활동에서 찍은 사진을 팀 내 1명이 대표로 사진을 업로드해주세요!",
         "showGallery": false
