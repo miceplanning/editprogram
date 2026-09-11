@@ -162,7 +162,7 @@ Node.js나 별도 빌드 과정 없이 동작하는 순수 HTML/CSS/JS 정적 �
 - 각 행사 폴더는 `index.html`/`schedule.html`/`faq.html`/`survey.html`/`flight.html`/`location.html`/`upload.html`/`vote.html`과 그 행사만의 `content.js`를 담고 있습니다. `css`/`js`(공용 스크립트)와 `images`는 루트 것을 그대로 같이 씁니다.
 - 새 행사를 이 구조로 추가할 때는 (1) 새 폴더에 페이지 파일들을 복사하고 `css`/`js` 참조 경로를 `../../`로, `content.js`는 그 폴더에 두고 `<script src="content.js">`로 바꾸고 (2) `content.js` 안의 모든 `"images/..."` 경로 앞에 `../../`를 붙이고 (3) `archive.html`에 카드를 하나 추가합니다.
 - `archive.html`이 조직별 행사 목록(아카이브) 페이지입니다 — `editor.html`처럼 방문자 내비게이션에는 연결되어 있지 않은 운영팀 전용 페이지입니다.
-- 루트 주소(`https://.../editprogram/`)는 당분간 그대로 "가장 최근 배포한 행사"를 보여줍니다 — 이미 참가자에게 공유한 링크가 깨지지 않도록, 그 행사가 끝난 뒤에만 아카이브 목록으로 전환합니다.
+- 루트 주소(`https://.../editprogram/`)는 이제 `archive.html`(행사 아카이브 목록)로 자동 리다이렉트됩니다. 앞으로 참가자에게 공유할 링크는 항상 각 행사 폴더의 주소(`<조직-영문슬러그>/<행사-영문슬러그>/`)를 사용하세요.
 
 ---
 
