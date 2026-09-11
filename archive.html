@@ -37,14 +37,18 @@
   <main class="editor-main archive-main">
     <div class="editor-container">
 
-      <section class="archive-status">
-        <h2 class="archive-status-title">🔜 다가오는 행사</h2>
-        <div id="upcoming-groups"></div>
+      <section class="archive-status open">
+        <button type="button" class="archive-status-title" onclick="this.closest('.archive-status').classList.toggle('open')">
+          🔜 다가오는 행사 <span class="chevron">▾</span>
+        </button>
+        <div class="archive-status-body"><div id="upcoming-groups"></div></div>
       </section>
 
       <section class="archive-status">
-        <h2 class="archive-status-title">📁 지난 행사</h2>
-        <div id="past-groups"></div>
+        <button type="button" class="archive-status-title" onclick="this.closest('.archive-status').classList.toggle('open')">
+          📁 지난 행사 <span class="chevron">▾</span>
+        </button>
+        <div class="archive-status-body"><div id="past-groups"></div></div>
       </section>
 
     </div>
