@@ -9,7 +9,7 @@
 */
 
 window.CONTENT = {
-  "eventName": "경희대 AI기술경영학과 워크샵(서울)",
+  "eventName": "기술경영경제학회 동계학술대회 참석",
   "eventSubtitle": "AI기술경영학과 동계 워크숍",
   "date": "2026-12-10",
   "dateDisplay": "2026년 12월 10일(목) ~ 12일(토), 2박 3일",
