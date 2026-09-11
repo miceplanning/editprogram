@@ -5,6 +5,14 @@
 
 .archive-main { padding-top: 24px; }
 
+.archive-status { margin-bottom: 36px; }
+.archive-status-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
 .archive-org { margin-bottom: 28px; }
 .archive-org-title {
   font-size: 16px;
@@ -14,6 +22,13 @@
   padding-bottom: 8px;
   border-bottom: 1.5px solid var(--color-border);
 }
+.archive-org-subtitle {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-muted);
+  margin: 18px 0 10px;
+}
+.archive-org-subtitle:first-child { margin-top: 0; }
 
 .archive-event-list {
   display: grid;
