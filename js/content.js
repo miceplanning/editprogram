@@ -23,7 +23,7 @@ window.CONTENT = {
     "flight": false,
     "location": false
   },
-  "heroImage": "",
+  "heroImage": "images/숲속 트레킹.jpg",
   "heroTagline": "교래자연휴양림에서 즐기는 숲 속 트레킹",
   "notice": {
     "active": false,
