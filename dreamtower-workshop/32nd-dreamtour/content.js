@@ -23,7 +23,7 @@ window.CONTENT = {
     "flight": false,
     "location": false
   },
-  "heroImage": "images/숲속 트레킹.jpg",
+  "heroImage": "../../images/숲속 트레킹.jpg",
   "heroTagline": "교래자연휴양림에서 즐기는 숲 속 트레킹",
   "notice": {
     "active": false,
@@ -133,7 +133,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/청지목가든.png",
+      "photo": "../../images/청지목가든.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
