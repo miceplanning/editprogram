@@ -7,6 +7,18 @@
   =====================================================================
 */
 
+// 아코디언을 열 때 timeline-body의 max-height를 실제 내용 높이(scrollHeight)에
+// 맞춰줍니다. CSS만으로 고정 max-height(예: 900px)를 주면 사진 + 긴 설명이 있는
+// 항목은 모바일 화면(너비가 좁아 줄바꿈이 많아짐)에서 그 값을 넘어서 내용이
+// 잘려 보이는 문제가 있어, 매번 실제 높이를 계산해 넣습니다.
+function toggleScheduleItem(button) {
+  const item = button.closest(".timeline-item");
+  const body = item.querySelector(".timeline-body");
+  const willOpen = !item.classList.contains("open");
+  item.classList.toggle("open");
+  body.style.maxHeight = willOpen ? body.scrollHeight + "px" : "";
+}
+
 function scheduleItemHtml(item, index) {
   const chips = [];
   if (item.difficulty) chips.push('<span class="info-chip chip-difficulty">난이도 ' + escapeHtml(item.difficulty) + "</span>");
@@ -62,7 +74,7 @@ function scheduleItemHtml(item, index) {
   return (
     '<div class="timeline-item" id="schedule-item-' + item.id + '">' +
     '<div class="timeline-card">' +
-    '<button class="timeline-head" onclick="this.closest(\'.timeline-item\').classList.toggle(\'open\')">' +
+    '<button class="timeline-head" onclick="toggleScheduleItem(this)">' +
     '<div class="time-box"><div class="time">' + escapeHtml(item.time) + "</div>" +
     (item.endTime ? '<div class="time-end">~' + escapeHtml(item.endTime) + "</div>" : "") +
     "</div>" +
