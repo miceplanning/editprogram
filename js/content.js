@@ -23,7 +23,7 @@ window.CONTENT = {
     "flight": false,
     "location": false
   },
-  "heroImage": "",
+  "heroImage": "images/한양대 에리카 메인 사진.png",
   "heroTagline": "1박 2일 제주 워크숍",
   "notice": {
     "active": false,
