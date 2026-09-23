@@ -367,7 +367,7 @@ window.CONTENT = {
       "location": "먹돌고기국수 제주본점",
       "mapUrl": "https://maps.app.goo.gl/BajuomqUWj2idKMDA",
       "voteUrl": "",
-      "description": "메뉴: 제주도 고기국수, 흑돼지 육전, 돔베고기 등",
+      "description": "메뉴: 제주도 고기국수, 한방국밥, 흑돼지 육전, 돔베고기 등",
       "travelTimeToNext": "버스 이동 약 5분",
       "difficulty": null,
       "distance": null,
