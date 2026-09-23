@@ -133,7 +133,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-4-스크린샷-2026-07-16-오후-4.03.36.png",
+      "photo": "../../images/schedule-4-스크린샷-2026-07-16-오후-4.03.36.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -157,7 +157,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-5-포도뮤지엄.png",
+      "photo": "../../images/schedule-5-포도뮤지엄.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -205,7 +205,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-7-신화월드리조트-랜딩관(1인1실).png",
+      "photo": "../../images/schedule-7-신화월드리조트-랜딩관(1인1실).png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -229,7 +229,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-8-대포동산횟집.png",
+      "photo": "../../images/schedule-8-대포동산횟집.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -301,7 +301,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-11-양가네.png",
+      "photo": "../../images/schedule-11-양가네.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -325,7 +325,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-12-오설록.jpg",
+      "photo": "../../images/schedule-12-오설록.jpg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -349,7 +349,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-13-애월-한담-해변.png",
+      "photo": "../../images/schedule-13-애월-한담-해변.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -373,7 +373,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": "images/schedule-14-먹돌고기국수-.jpeg",
+      "photo": "../../images/schedule-14-먹돌고기국수-.jpeg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
