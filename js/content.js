@@ -79,7 +79,7 @@ window.CONTENT = {
       "location": "카멜리아힐",
       "mapUrl": "https://maps.app.goo.gl/1ngXGs9NjfqsjuDU9",
       "voteUrl": "",
-      "description": "카멜리아힐 출구에 위치한 \"동백부엌\"으로 16시까지 집결해주세요!",
+      "description": "",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
