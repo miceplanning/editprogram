@@ -1137,7 +1137,7 @@ window.CONTENT = {
         "returnTime": "19:25",
         "returnLocation": "제주",
         "returnFlight": "KE1554",
-        "returnReservation": "확인중"
+        "returnReservation": "52E5UH"
       },
       {
         "name": "한영숙",
