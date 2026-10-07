@@ -885,21 +885,6 @@ window.CONTENT = {
         "returnReservation": "EYFEC4"
       },
       {
-        "name": "이혜인",
-        "departureDate": "10/15(목)",
-        "departureAirline": "제주항공",
-        "departureTime": "08:50",
-        "departureLocation": "부산",
-        "departureFlight": "7C503",
-        "departureReservation": "DBKJUZ",
-        "returnDate": "10/16(금)",
-        "returnAirline": "대한항공",
-        "returnTime": "19:25",
-        "returnLocation": "제주",
-        "returnFlight": "KE1554",
-        "returnReservation": "EYFEC4"
-      },
-      {
         "name": "박수정",
         "departureDate": "10/15(목)",
         "departureAirline": "제주항공",
@@ -931,21 +916,6 @@ window.CONTENT = {
       },
       {
         "name": "강다현",
-        "departureDate": "10/15(목)",
-        "departureAirline": "제주항공",
-        "departureTime": "08:50",
-        "departureLocation": "부산",
-        "departureFlight": "7C503",
-        "departureReservation": "DBKJUZ",
-        "returnDate": "10/16(금)",
-        "returnAirline": "대한항공",
-        "returnTime": "19:25",
-        "returnLocation": "제주",
-        "returnFlight": "KE1554",
-        "returnReservation": "EYFEC4"
-      },
-      {
-        "name": "김광익",
         "departureDate": "10/15(목)",
         "departureAirline": "제주항공",
         "departureTime": "08:50",
@@ -1006,21 +976,6 @@ window.CONTENT = {
       },
       {
         "name": "양재원",
-        "departureDate": "10/15(목)",
-        "departureAirline": "제주항공",
-        "departureTime": "08:50",
-        "departureLocation": "부산",
-        "departureFlight": "7C503",
-        "departureReservation": "DBKJUZ",
-        "returnDate": "10/16(금)",
-        "returnAirline": "대한항공",
-        "returnTime": "19:25",
-        "returnLocation": "제주",
-        "returnFlight": "KE1554",
-        "returnReservation": "EYFEC4"
-      },
-      {
-        "name": "김건형",
         "departureDate": "10/15(목)",
         "departureAirline": "제주항공",
         "departureTime": "08:50",
