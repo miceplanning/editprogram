@@ -109,12 +109,20 @@ function renderLayout(activePage) {
     { key: "home", href: "index.html", icon: "🏠", label: "홈" },
     { key: "schedule", href: "schedule.html", icon: "🗓️", label: "일정" },
     { key: "flight", href: "flight.html", icon: "✈️", label: "항공권", sectionKey: "flight" },
+    { key: "bus", href: "bus.html", icon: "🚌", label: "버스", sectionKey: "bus", optIn: true },
+    { key: "room", href: "room.html", icon: "🛏️", label: "방배정", sectionKey: "rooms", optIn: true },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },
     { key: "vote", href: "vote.html", icon: "🗳️", label: "투표", show: hasVoteItems },
     { key: "location", href: "location.html", icon: "🗺️", label: "오시는길", sectionKey: "location" },
     { key: "faq", href: "faq.html", icon: "❓", label: "FAQ", sectionKey: "faq" },
     { key: "survey", href: "survey.html", icon: "📝", label: "설문", sectionKey: "survey" }
-  ].filter((t) => t.show !== false && (!t.sectionKey || (c.sectionsEnabled && c.sectionsEnabled[t.sectionKey]) !== false));
+  ].filter((t) => {
+    if (t.show === false) return false;
+    if (!t.sectionKey) return true;
+    const v = c.sectionsEnabled && c.sectionsEnabled[t.sectionKey];
+    // optIn 탭(버스/방배정)은 sectionsEnabled 에 true 로 켜둔 행사에서만 보입니다.
+    return t.optIn ? v === true : v !== false;
+  });
   nav.innerHTML = tabs
     .map(
       (t) =>

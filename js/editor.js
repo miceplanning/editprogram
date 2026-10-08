@@ -37,7 +37,7 @@ function withDefaults(src) {
     heroImage: src.heroImage || "",
     heroTagline: src.heroTagline || "",
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, location: true },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -56,7 +56,9 @@ function withDefaults(src) {
     survey: Object.assign({ url: "", duration: "" }, src.survey || {}),
     flight: Object.assign({ formUrl: "", notice: "", records: [] }, src.flight || {}, {
       records: src.flight && src.flight.records ? deepClone(src.flight.records) : []
-    })
+    }),
+    bus: { notice: (src.bus && src.bus.notice) || "", groups: src.bus && src.bus.groups ? deepClone(src.bus.groups) : [] },
+    rooms: { notice: (src.rooms && src.rooms.notice) || "", groups: src.rooms && src.rooms.groups ? deepClone(src.rooms.groups) : [] }
   };
 }
 
@@ -614,6 +616,52 @@ function renderFlightList() {
 }
 
 // ---------------------------------------------------------------
+// ⑬ 버스 호차 / 방 배정 (이름 → 그룹 조회용 명단)
+// ---------------------------------------------------------------
+// 그룹 하나 = { label: "1호차" 또는 "1호", date: "10/15(목)"(선택), members: ["이름", "이름 (메모)", ...] }
+function renderGroupList(target, listId, countId, labelText, labelPlaceholder) {
+  const container = document.getElementById(listId);
+  container.innerHTML = "";
+  target.groups.forEach((item) => {
+    if (!Array.isArray(item.members)) item.members = [];
+    const rerender = () => renderGroupList(target, listId, countId, labelText, labelPlaceholder);
+    const { row, body } = createRowShell(
+      (item.date ? item.date + " · " : "") + (item.label || "(이름 없음)") + " — " + item.members.length + "명",
+      item, target.groups, rerender
+    );
+    body.appendChild(fieldGrid(
+      fieldInput(labelText, item, "label", { placeholder: labelPlaceholder }),
+      fieldInput("날짜 (선택)", item, "date", { placeholder: "10/15(목)" })
+    ));
+    const label = document.createElement("label");
+    label.classList.add("span-2");
+    label.appendChild(document.createTextNode("명단 (한 줄에 한 명 · 메모는 \"이름 (메모)\" 형태로)"));
+    const ta = document.createElement("textarea");
+    ta.rows = Math.max(3, Math.min(item.members.length + 1, 12));
+    ta.value = item.members.join("\n");
+    ta.addEventListener("input", () => {
+      item.members = ta.value.split("\n").map((s) => s.trim()).filter(Boolean);
+      markDirty();
+    });
+    label.appendChild(ta);
+    body.appendChild(label);
+    container.appendChild(row);
+  });
+  setCount(countId, target.groups.reduce((n, g) => n + (g.members || []).length, 0));
+}
+
+function exportGroups(target) {
+  return {
+    notice: target.notice || "",
+    groups: target.groups.map((g) => ({
+      label: g.label || "",
+      date: g.date || "",
+      members: (g.members || []).map((m) => String(m).trim()).filter(Boolean)
+    }))
+  };
+}
+
+// ---------------------------------------------------------------
 // content.js 파일 텍스트 생성 + 다운로드
 // ---------------------------------------------------------------
 function buildExportObject() {
@@ -630,6 +678,8 @@ function buildExportObject() {
       faq: !!state.sectionsEnabled.faq,
       survey: !!state.sectionsEnabled.survey,
       flight: !!state.sectionsEnabled.flight,
+      bus: !!state.sectionsEnabled.bus,
+      rooms: !!state.sectionsEnabled.rooms,
       location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
@@ -706,7 +756,9 @@ function buildExportObject() {
         returnFlight: r.returnFlight || "",
         returnReservation: r.returnReservation || ""
       }))
-    }
+    },
+    bus: exportGroups(state.bus),
+    rooms: exportGroups(state.rooms)
   };
 }
 
@@ -902,6 +954,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   bindInput("f-flight-formUrl", state.flight, "formUrl");
   bindInput("f-flight-notice", state.flight, "notice");
+  bindInput("f-bus-notice", state.bus, "notice");
+  bindInput("f-rooms-notice", state.rooms, "notice");
 
   renderStaffList();
   renderScheduleList();
@@ -909,6 +963,21 @@ document.addEventListener("DOMContentLoaded", function () {
   renderChecklistList();
   renderFaqList();
   renderFlightList();
+  const renderBusList = () => renderGroupList(state.bus, "bus-list", "count-bus", "호차", "1호차");
+  const renderRoomsList = () => renderGroupList(state.rooms, "rooms-list", "count-rooms", "방 번호", "1호");
+  renderBusList();
+  renderRoomsList();
+  document.getElementById("add-bus").addEventListener("click", () => {
+    state.bus.groups.push({ label: (state.bus.groups.length + 1) + "호차", date: "", members: [] });
+    renderBusList();
+    markDirty();
+  });
+  document.getElementById("add-rooms").addEventListener("click", () => {
+    const last = state.rooms.groups[state.rooms.groups.length - 1];
+    state.rooms.groups.push({ label: "", date: last ? last.date : "", members: [] });
+    renderRoomsList();
+    markDirty();
+  });
 
   document.getElementById("add-staff").addEventListener("click", () => {
     state.staff.push({ name: "", role: "", phone: "", photo: "" });

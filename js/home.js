@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const quickMenuItems = [
     '<a href="schedule.html"><span class="icon">🗓️</span>일정</a>',
     sectionOn("flight") ? '<a href="flight.html"><span class="icon">✈️</span>항공권</a>' : "",
+    (c.sectionsEnabled && c.sectionsEnabled.bus === true) ? '<a href="bus.html"><span class="icon">🚌</span>버스</a>' : "",
+    (c.sectionsEnabled && c.sectionsEnabled.rooms === true) ? '<a href="room.html"><span class="icon">🛏️</span>방배정</a>' : "",
     hasUploadItems ? '<a href="upload.html"><span class="icon">📸</span>사진업로드</a>' : "",
     hasVoteItems ? '<a href="vote.html"><span class="icon">🗳️</span>투표</a>' : "",
     sectionOn("location") ? '<a href="location.html"><span class="icon">🗺️</span>오시는길</a>' : "",
