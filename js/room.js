@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   renderGroupLookup({
     rootId: "room-content",
     data: window.CONTENT.rooms,
-    searchTitle: "🔍 내 방 배정 조회",
-    emptyText: "아직 등록된 방 배정 명단이 없습니다. 준비되는 대로 이 페이지에서 조회하실 수 있어요."
+    searchTitle: "🔍 내 객실 조회",
+    emptyText: "아직 등록된 객실 배정 명단이 없습니다. 준비되는 대로 이 페이지에서 조회하실 수 있어요."
   });
 });
