@@ -290,6 +290,11 @@ main {
 }
 .hero .hero-text h1 { font-size: 20px; font-weight: 800; }
 .hero .hero-text p { font-size: 13px; opacity: 0.92; margin-top: 4px; }
+/* 배너형(글자가 들어간 가로 이미지): 자르지 않고 전체 표시, 행사명은 이미지 아래 */
+.hero.hero-banner { display: block; min-height: 0; }
+.hero.hero-banner img,
+.hero.hero-banner img[style] { position: static; display: block; width: 100%; height: auto !important; object-fit: contain; background: #fff; }
+.hero.hero-banner .hero-text { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); }
 
 .badge {
   display: inline-flex;

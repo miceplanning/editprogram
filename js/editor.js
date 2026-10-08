@@ -36,6 +36,7 @@ function withDefaults(src) {
     dateDisplay: src.dateDisplay || "",
     heroImage: src.heroImage || "",
     heroTagline: src.heroTagline || "",
+    heroBanner: !!src.heroBanner,
     sectionsEnabled: Object.assign(
       { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, location: true },
       src.sectionsEnabled || {}
@@ -684,6 +685,7 @@ function buildExportObject() {
     },
     heroImage: state.heroImage,
     heroTagline: state.heroTagline,
+    heroBanner: !!state.heroBanner,
     notice: { active: !!state.notice.active, text: state.notice.text },
     rainPlan: {
       hasIndoorAlternative: !!state.rainPlan.hasIndoorAlternative,
@@ -931,6 +933,7 @@ document.addEventListener("DOMContentLoaded", function () {
   bindInput("f-dateDisplay", state, "dateDisplay");
   bindInput("f-heroImage", state, "heroImage");
   bindInput("f-heroTagline", state, "heroTagline");
+  bindInput("f-heroBanner", state, "heroBanner");
 
   bindInput("f-notice-active", state.notice, "active");
   bindInput("f-notice-text", state.notice, "text");

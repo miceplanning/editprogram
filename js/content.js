@@ -27,6 +27,7 @@ window.CONTENT = {
   },
   "heroImage": "images/싸이트플래닝-메인-사진.png",
   "heroTagline": "20주년 기념 제주 워크숍",
+  "heroBanner": true,
   "notice": {
     "active": true,
     "text": "일부 프로그램은 이동 시간이 포함되어 있으며, 상황에 따라 일정이 변경될 수 있습니다."

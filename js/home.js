@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ---------------- 히어로 영역 ----------------
   const heroHtml =
-    '<div class="hero">' +
+    '<div class="hero' + (c.heroBanner ? " hero-banner" : "") + '">' +
     '<img src="' + escapeHtml(c.heroImage) + '" alt="' + escapeHtml(c.eventName) + '" onerror="this.style.display=\'none\'" />' +
     '<div class="hero-text">' +
     '<span class="badge date">' + escapeHtml(c.dateDisplay || c.date) + "</span>" +
