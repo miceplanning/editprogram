@@ -25,7 +25,7 @@ window.CONTENT = {
     "rooms": true,
     "location": false
   },
-  "heroImage": "",
+  "heroImage": "../../images/싸이트플래닝-메인-사진.png",
   "heroTagline": "20주년 기념 제주 워크숍",
   "notice": {
     "active": true,
@@ -43,7 +43,7 @@ window.CONTENT = {
   },
   "staff": [],
   "meetingSummary": {
-    "time": "08:00",
+    "time": "07:30",
     "location": "공항 집결 (김포/부산 - 본인 항공편은 항공권 조회에서 확인)",
     "mapUrl": ""
   },
@@ -51,8 +51,8 @@ window.CONTENT = {
     {
       "id": 1,
       "date": "2026-10-15",
-      "time": "08:00",
-      "endTime": "08:50",
+      "time": "07:30",
+      "endTime": null,
       "title": "공항 집결",
       "location": "",
       "mapUrl": "",
@@ -100,18 +100,18 @@ window.CONTENT = {
       "id": 3,
       "date": "2026-10-15",
       "time": "10:10",
-      "endTime": "10:30",
+      "endTime": null,
       "title": "버스 탑승",
       "location": "",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "",
+      "description": "제주공항 도착 후 버스 탑승 안내\n\n제주공항 도착 후, 공항 내 안내 스태프의 안내에 따라 버스 주차장으로 이동해 주시기 바랍니다.\n버스 주차장 도착 후 지정된 버스에 탑승해 주시기 바랍니다.",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "../../images/schedule-3-공항-내부-동선.png",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -123,11 +123,11 @@ window.CONTENT = {
     {
       "id": 4,
       "date": "2026-10-15",
-      "time": "10:30",
-      "endTime": "11:00",
-      "title": "점심장소로 이동",
-      "location": "",
-      "mapUrl": "",
+      "time": "11:00",
+      "endTime": "12:30",
+      "title": "점심 식사",
+      "location": "이금돈지",
+      "mapUrl": "https://maps.app.goo.gl/JrkiRQbqiEXpyxXw6",
       "voteUrl": "",
       "description": "",
       "travelTimeToNext": null,
@@ -146,30 +146,6 @@ window.CONTENT = {
     },
     {
       "id": 5,
-      "date": "2026-10-15",
-      "time": "11:00",
-      "endTime": "12:30",
-      "title": "점심 식사",
-      "location": "",
-      "mapUrl": "",
-      "voteUrl": "",
-      "description": "",
-      "travelTimeToNext": null,
-      "difficulty": null,
-      "distance": null,
-      "meal": null,
-      "freeTimeRecommendation": null,
-      "photo": null,
-      "photoUpload": {
-        "enabled": false,
-        "formUrl": "",
-        "driveFolderUrl": "",
-        "description": "",
-        "showGallery": false
-      }
-    },
-    {
-      "id": 6,
       "date": "2026-10-15",
       "time": "12:30",
       "endTime": "13:00",
@@ -193,13 +169,37 @@ window.CONTENT = {
       }
     },
     {
-      "id": 7,
+      "id": 6,
       "date": "2026-10-15",
       "time": "13:00",
       "endTime": "15:00",
       "title": "저지문화예술인마을",
       "location": "김창열미술관, 제주현대미술관",
-      "mapUrl": "",
+      "mapUrl": "https://maps.app.goo.gl/CHBGfnaf9ZPDnPvH6",
+      "voteUrl": "",
+      "description": "",
+      "travelTimeToNext": null,
+      "difficulty": null,
+      "distance": null,
+      "meal": null,
+      "freeTimeRecommendation": null,
+      "photo": null,
+      "photoUpload": {
+        "enabled": false,
+        "formUrl": "",
+        "driveFolderUrl": "",
+        "description": "",
+        "showGallery": false
+      }
+    },
+    {
+      "id": 7,
+      "date": "2026-10-15",
+      "time": "15:00",
+      "endTime": "16:00",
+      "title": "본태박물관",
+      "location": "",
+      "mapUrl": "https://maps.app.goo.gl/oDbK1z5VNgaNF9wf7",
       "voteUrl": "",
       "description": "",
       "travelTimeToNext": null,
@@ -219,9 +219,9 @@ window.CONTENT = {
     {
       "id": 8,
       "date": "2026-10-15",
-      "time": "15:00",
-      "endTime": "16:00",
-      "title": "본태박물관",
+      "time": "16:00",
+      "endTime": "17:00",
+      "title": "이동 및 숙소 배정(방 배정 탭에서 객실 넘버 확인 가능합니다)",
       "location": "",
       "mapUrl": "",
       "voteUrl": "",
@@ -231,7 +231,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "../../images/schedule-8-야크마을-지도.jpeg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -243,10 +243,10 @@ window.CONTENT = {
     {
       "id": 9,
       "date": "2026-10-15",
-      "time": "16:00",
-      "endTime": "17:00",
-      "title": "이동 및 숙소 배정",
-      "location": "",
+      "time": "17:00",
+      "endTime": "18:00",
+      "title": "연회 오프닝 행사",
+      "location": "야크마을 연회장",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -267,10 +267,10 @@ window.CONTENT = {
     {
       "id": 10,
       "date": "2026-10-15",
-      "time": "17:00",
-      "endTime": "18:00",
-      "title": "연회 오프닝 행사",
-      "location": "",
+      "time": "18:00",
+      "endTime": "19:00",
+      "title": "저녁 식사",
+      "location": "야크마을 연회장",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -291,10 +291,10 @@ window.CONTENT = {
     {
       "id": 11,
       "date": "2026-10-15",
-      "time": "18:00",
-      "endTime": "19:00",
-      "title": "저녁 식사",
-      "location": "",
+      "time": "19:00",
+      "endTime": "20:00",
+      "title": "20주년 기념 이벤트",
+      "location": "야크마을 연회장",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -314,11 +314,11 @@ window.CONTENT = {
     },
     {
       "id": 12,
-      "date": "2026-10-15",
-      "time": "19:00",
-      "endTime": "20:00",
-      "title": "20주년 기념 이벤트",
-      "location": "",
+      "date": "2026-10-16",
+      "time": "07:00",
+      "endTime": "09:30",
+      "title": "조식 & 개인 일정",
+      "location": "야크마을 두도레스토랑",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -338,30 +338,6 @@ window.CONTENT = {
     },
     {
       "id": 13,
-      "date": "2026-10-16",
-      "time": "07:00",
-      "endTime": "09:30",
-      "title": "조식 & 개인 일정",
-      "location": "",
-      "mapUrl": "",
-      "voteUrl": "",
-      "description": "",
-      "travelTimeToNext": null,
-      "difficulty": null,
-      "distance": null,
-      "meal": null,
-      "freeTimeRecommendation": null,
-      "photo": null,
-      "photoUpload": {
-        "enabled": false,
-        "formUrl": "",
-        "driveFolderUrl": "",
-        "description": "",
-        "showGallery": false
-      }
-    },
-    {
-      "id": 14,
       "date": "2026-10-16",
       "time": "09:30",
       "endTime": "10:00",
@@ -385,12 +361,36 @@ window.CONTENT = {
       }
     },
     {
-      "id": 15,
+      "id": 14,
       "date": "2026-10-16",
       "time": "10:00",
       "endTime": "12:00",
       "title": "제주 오름 투어",
-      "location": "",
+      "location": "새별오름",
+      "mapUrl": "https://maps.app.goo.gl/WztyyQipWbf7Z2R58",
+      "voteUrl": "",
+      "description": "",
+      "travelTimeToNext": null,
+      "difficulty": null,
+      "distance": null,
+      "meal": null,
+      "freeTimeRecommendation": null,
+      "photo": null,
+      "photoUpload": {
+        "enabled": false,
+        "formUrl": "",
+        "driveFolderUrl": "",
+        "description": "",
+        "showGallery": false
+      }
+    },
+    {
+      "id": 15,
+      "date": "2026-10-16",
+      "time": "12:00",
+      "endTime": "13:30",
+      "title": "점심 식사",
+      "location": "열흘 흑돼지(한림협재점)",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -410,30 +410,6 @@ window.CONTENT = {
     },
     {
       "id": 16,
-      "date": "2026-10-16",
-      "time": "12:00",
-      "endTime": "13:30",
-      "title": "점심 식사",
-      "location": "",
-      "mapUrl": "",
-      "voteUrl": "",
-      "description": "",
-      "travelTimeToNext": null,
-      "difficulty": null,
-      "distance": null,
-      "meal": null,
-      "freeTimeRecommendation": null,
-      "photo": null,
-      "photoUpload": {
-        "enabled": false,
-        "formUrl": "",
-        "driveFolderUrl": "",
-        "description": "",
-        "showGallery": false
-      }
-    },
-    {
-      "id": 17,
       "date": "2026-10-16",
       "time": "13:30",
       "endTime": "14:00",
@@ -457,13 +433,13 @@ window.CONTENT = {
       }
     },
     {
-      "id": 18,
+      "id": 17,
       "date": "2026-10-16",
       "time": "14:00",
       "endTime": "16:00",
       "title": "시너지&리프레시 프로그램",
-      "location": "",
-      "mapUrl": "",
+      "location": "9.81파크",
+      "mapUrl": "https://maps.app.goo.gl/ChTJMhcMB9aefEAPA",
       "voteUrl": "",
       "description": "",
       "travelTimeToNext": null,
@@ -481,7 +457,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 19,
+      "id": 18,
       "date": "2026-10-16",
       "time": "16:00",
       "endTime": "17:00",
@@ -505,7 +481,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 20,
+      "id": 19,
       "date": "2026-10-16",
       "time": "18:55",
       "endTime": "20:25",
@@ -1579,7 +1555,7 @@ window.CONTENT = {
     ]
   },
   "bus": {
-    "notice": "",
+    "notice": "이름을 검색하면 버스 호차를 확인하실 수 있습니다.",
     "groups": [
       {
         "label": "1호차",
@@ -1661,7 +1637,7 @@ window.CONTENT = {
     ]
   },
   "rooms": {
-    "notice": "",
+    "notice": "이름을 검색하면 야크마을 객실 넘버를 확인하실 수 있습니다.",
     "groups": [
       {
         "label": "1호",
