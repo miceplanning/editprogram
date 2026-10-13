@@ -639,21 +639,6 @@ window.CONTENT = {
         "returnReservation": "GDL7UW"
       },
       {
-        "name": "박경민",
-        "departureDate": "10/15(목)",
-        "departureAirline": "제주항공",
-        "departureTime": "08:55",
-        "departureLocation": "김포",
-        "departureFlight": "7C109",
-        "departureReservation": "G8R9VF",
-        "returnDate": "10/16(금)",
-        "returnAirline": "제주항공",
-        "returnTime": "18:55",
-        "returnLocation": "제주",
-        "returnFlight": "7C186",
-        "returnReservation": "PJ282R"
-      },
-      {
         "name": "라현필",
         "departureDate": "10/15(목)",
         "departureAirline": "제주항공",
@@ -1579,7 +1564,6 @@ window.CONTENT = {
           "유성",
           "전주협",
           "오지환",
-          "박경민",
           "장종구"
         ]
       },
@@ -1696,7 +1680,6 @@ window.CONTENT = {
         "detail": "",
         "members": [
           "박종원",
-          "박경민",
           "라현필",
           "임지홍"
         ]
