@@ -634,6 +634,7 @@ function renderGroupList(target, listId, countId, labelText, labelPlaceholder) {
       fieldInput(labelText, item, "label", { placeholder: labelPlaceholder }),
       fieldInput("날짜 (선택)", item, "date", { placeholder: "10/15(목)" })
     ));
+    body.appendChild(fieldInput("추가 안내 (선택 · 예: 버스 회사/차량 번호)", item, "detail", { placeholder: "우성고속 4719호", span2: true }));
     const label = document.createElement("label");
     label.classList.add("span-2");
     label.appendChild(document.createTextNode("명단 (한 줄에 한 명 · 메모는 \"이름 (메모)\" 형태로)"));
@@ -657,6 +658,7 @@ function exportGroups(target) {
     groups: target.groups.map((g) => ({
       label: g.label || "",
       date: g.date || "",
+      detail: g.detail || "",
       members: (g.members || []).map((m) => String(m).trim()).filter(Boolean)
     }))
   };

@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     rootId: "bus-content",
     data: window.CONTENT.bus,
     searchTitle: "🔍 내 버스 호차 조회",
+    showSummary: true,
+    summaryTitle: "🚌 버스 안내",
     emptyText: "아직 등록된 버스 탑승 명단이 없습니다. 준비되는 대로 이 페이지에서 조회하실 수 있어요."
   });
 });

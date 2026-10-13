@@ -1546,6 +1546,7 @@ window.CONTENT = {
       {
         "label": "1호차",
         "date": "",
+        "detail": "우성고속 4719호",
         "members": [
           "한영숙 (2일차 제외)",
           "조현실",
@@ -1585,6 +1586,7 @@ window.CONTENT = {
       {
         "label": "2호차",
         "date": "",
+        "detail": "청구교통 7277호",
         "members": [
           "배찬우",
           "김정한",
@@ -1627,6 +1629,7 @@ window.CONTENT = {
       {
         "label": "1호",
         "date": "10/14(수)",
+        "detail": "",
         "members": [
           "김지언",
           "강정민",
@@ -1637,6 +1640,7 @@ window.CONTENT = {
       {
         "label": "1호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "정의근",
           "김종민",
@@ -1646,6 +1650,7 @@ window.CONTENT = {
       {
         "label": "2호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "최재영",
           "김용민",
@@ -1656,6 +1661,7 @@ window.CONTENT = {
       {
         "label": "3호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "김표성",
           "김태훈",
@@ -1666,6 +1672,7 @@ window.CONTENT = {
       {
         "label": "4호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "하동근",
           "허민",
@@ -1676,6 +1683,7 @@ window.CONTENT = {
       {
         "label": "5호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "전주협",
           "오지환",
@@ -1685,6 +1693,7 @@ window.CONTENT = {
       {
         "label": "6호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "박종원",
           "박경민",
@@ -1695,6 +1704,7 @@ window.CONTENT = {
       {
         "label": "7호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "임진성"
         ]
@@ -1702,6 +1712,7 @@ window.CONTENT = {
       {
         "label": "8호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "김동환",
           "박진형",
@@ -1712,6 +1723,7 @@ window.CONTENT = {
       {
         "label": "9호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "이세영",
           "김수영",
@@ -1722,6 +1734,7 @@ window.CONTENT = {
       {
         "label": "10호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "정지은",
           "최인영",
@@ -1731,6 +1744,7 @@ window.CONTENT = {
       {
         "label": "11호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "박현지",
           "백인영",
@@ -1740,6 +1754,7 @@ window.CONTENT = {
       {
         "label": "12호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "강다현",
           "장윤지",
@@ -1750,6 +1765,7 @@ window.CONTENT = {
       {
         "label": "13호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "김희은",
           "박규빈",
@@ -1760,6 +1776,7 @@ window.CONTENT = {
       {
         "label": "14호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "김우정",
           "강정민",
@@ -1770,6 +1787,7 @@ window.CONTENT = {
       {
         "label": "15호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "이슬기",
           "김지언",
@@ -1780,6 +1798,7 @@ window.CONTENT = {
       {
         "label": "16호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "김범준",
           "이창민",
@@ -1791,6 +1810,7 @@ window.CONTENT = {
       {
         "label": "17호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "배은경",
           "김채은",
@@ -1803,6 +1823,7 @@ window.CONTENT = {
       {
         "label": "18호",
         "date": "10/15(목)",
+        "detail": "",
         "members": [
           "조현실",
           "신나은",

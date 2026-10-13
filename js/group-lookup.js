@@ -6,6 +6,8 @@
   ✅ content.js 의 데이터 모양:
        bus   = { notice, groups: [{ label: "1호차", date: "", members: ["김OO", ...] }] }
        rooms = { notice, groups: [{ label: "1호",   date: "10/15(목)", members: [...] }] }
+     그룹마다 선택 항목 detail(예: "우성고속 4719호")을 넣으면 조회 결과에 함께 보여주고,
+     opts.showSummary 가 켜진 페이지(버스)에서는 검색창 위에 전체 그룹 안내 카드도 보여줍니다.
      members 의 각 항목은 "이름" 또는 "이름 (메모)" 형태로 적으면 됩니다.
      예: "한영숙 (2일차 제외)" — 조회 결과에 메모까지 그대로 보여줍니다.
   ✅ 한 사람이 여러 그룹에 들어 있으면(예: 1박째·2박째 방이 다름) 전부 보여줍니다.
@@ -25,6 +27,22 @@ function renderGroupLookup(opts) {
     html += '<div class="card"><p class="flight-empty">' + escapeHtml(opts.emptyText) + "</p></div>";
     root.innerHTML = html;
     return;
+  }
+
+  if (opts.showSummary && groups.some((g) => g.detail)) {
+    html +=
+      '<div class="card">' +
+      '<div class="section-title">' + escapeHtml(opts.summaryTitle || "안내") + "</div>" +
+      groups
+        .map(
+          (g) =>
+            '<div class="lookup-summary-row">' +
+            '<span class="lookup-summary-label">' + escapeHtml(g.label) + "</span>" +
+            '<span class="lookup-summary-detail">' + escapeHtml(g.detail || "") + "</span>" +
+            "</div>"
+        )
+        .join("") +
+      "</div>";
   }
 
   html +=
@@ -83,6 +101,7 @@ function renderGroupLookup(opts) {
                 '<div class="flight-leg">' +
                 (x.group.date ? '<div class="flight-leg-label">' + escapeHtml(x.group.date) + "</div>" : "") +
                 '<div class="lookup-label">' + escapeHtml(x.group.label) + "</div>" +
+                (x.group.detail ? '<div class="lookup-detail">' + escapeHtml(x.group.detail) + "</div>" : "") +
                 (memo ? '<div class="flight-leg-sub">' + escapeHtml(memo[1]) + "</div>" : "") +
                 "</div>"
               );
