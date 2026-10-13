@@ -1059,21 +1059,6 @@ window.CONTENT = {
         "returnReservation": "DDVV67"
       },
       {
-        "name": "임채은",
-        "departureDate": "10/15(목)",
-        "departureAirline": "제주항공",
-        "departureTime": "08:50",
-        "departureLocation": "부산",
-        "departureFlight": "7C503",
-        "departureReservation": "DBKJUZ",
-        "returnDate": "10/16(금)",
-        "returnAirline": "대한항공",
-        "returnTime": "19:25",
-        "returnLocation": "제주",
-        "returnFlight": "KE1554",
-        "returnReservation": "52E5UH"
-      },
-      {
         "name": "한영숙",
         "departureDate": "10/15(목)",
         "departureAirline": "제주항공",
@@ -1607,7 +1592,6 @@ window.CONTENT = {
           "김동환",
           "장윤지",
           "정민경",
-          "임채은",
           "김종민",
           "정의근",
           "박주혁",
@@ -1739,7 +1723,6 @@ window.CONTENT = {
         "label": "10호",
         "date": "10/15(목)",
         "members": [
-          "임채은",
           "정지은",
           "최인영",
           "정민경"
