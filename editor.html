@@ -209,6 +209,25 @@
         <button type="button" class="btn-add" id="add-flight">+ 항공권 직접 추가</button>
       </section>
 
+      <!-- 팀미션 -->
+      <section class="editor-panel" id="panel-mission" data-icon="🎯" data-label="팀미션">
+        <div class="panel-head"><span class="panel-icon">🎯</span><h2>팀미션</h2><span class="panel-count" id="count-mission"></span></div>
+        <div class="section-toggle">
+          <label class="checkbox-line">
+            <input type="checkbox" data-section-key="mission" />
+            이 섹션 사용 (끄면 하단 메뉴에서 탭도 함께 사라져요 — 데이터는 남아있어요)
+          </label>
+        </div>
+        <p class="editor-hint">미션 설명, 참고 영상(유튜브 링크를 넣으면 페이지 안에서 바로 재생), 결과 제출용 구글폼 링크를 미션마다 등록합니다. 구글폼 링크가 비어 있으면 참가자 화면에 "제출 링크 준비 중"으로 표시돼요.</p>
+        <div class="field-grid">
+          <label class="span-2">참가자에게 보여줄 안내 문구 (선택)
+            <textarea id="f-mission-notice" rows="2"></textarea>
+          </label>
+        </div>
+        <div id="mission-list" class="repeat-list"></div>
+        <button type="button" class="btn-add" id="add-mission">+ 미션 추가</button>
+      </section>
+
       <!-- 버스 호차 -->
       <section class="editor-panel" id="panel-bus" data-icon="🚌" data-label="버스 호차">
         <div class="panel-head"><span class="panel-icon">🚌</span><h2>버스 호차 배정</h2><span class="panel-count" id="count-bus"></span></div>

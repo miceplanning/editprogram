@@ -38,7 +38,7 @@ function withDefaults(src) {
     heroTagline: src.heroTagline || "",
     heroBanner: !!src.heroBanner,
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, location: true },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -59,7 +59,8 @@ function withDefaults(src) {
       records: src.flight && src.flight.records ? deepClone(src.flight.records) : []
     }),
     bus: { notice: (src.bus && src.bus.notice) || "", groups: src.bus && src.bus.groups ? deepClone(src.bus.groups) : [] },
-    rooms: { notice: (src.rooms && src.rooms.notice) || "", groups: src.rooms && src.rooms.groups ? deepClone(src.rooms.groups) : [] }
+    rooms: { notice: (src.rooms && src.rooms.notice) || "", groups: src.rooms && src.rooms.groups ? deepClone(src.rooms.groups) : [] },
+    mission: { notice: (src.mission && src.mission.notice) || "", items: src.mission && src.mission.items ? deepClone(src.mission.items) : [] }
   };
 }
 
@@ -652,6 +653,24 @@ function renderGroupList(target, listId, countId, labelText, labelPlaceholder) {
   setCount(countId, target.groups.reduce((n, g) => n + (g.members || []).length, 0));
 }
 
+function renderMissionList() {
+  const container = document.getElementById("mission-list");
+  if (!container) return;
+  container.innerHTML = "";
+  state.mission.items.forEach((item, idx) => {
+    const { row, body } = createRowShell(
+      (idx + 1) + ". " + (item.title || "(미션 이름 없음)"),
+      item, state.mission.items, renderMissionList
+    );
+    body.appendChild(fieldInput("미션 이름", item, "title", { placeholder: "바디레터 미션", span2: true }));
+    body.appendChild(fieldInput("미션 설명", item, "description", { textarea: true, rows: 3, span2: true }));
+    body.appendChild(fieldInput("참고 영상 링크 (유튜브)", item, "videoUrl", { placeholder: "https://youtu.be/...", span2: true }));
+    body.appendChild(fieldInput("제출용 구글폼 링크", item, "formUrl", { placeholder: "https://docs.google.com/forms/d/.../viewform", span2: true }));
+    container.appendChild(row);
+  });
+  setCount("count-mission", state.mission.items.length);
+}
+
 function exportGroups(target) {
   return {
     notice: target.notice || "",
@@ -683,6 +702,7 @@ function buildExportObject() {
       flight: !!state.sectionsEnabled.flight,
       bus: !!state.sectionsEnabled.bus,
       rooms: !!state.sectionsEnabled.rooms,
+      mission: !!state.sectionsEnabled.mission,
       location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
@@ -762,7 +782,16 @@ function buildExportObject() {
       }))
     },
     bus: exportGroups(state.bus),
-    rooms: exportGroups(state.rooms)
+    rooms: exportGroups(state.rooms),
+    mission: {
+      notice: state.mission.notice || "",
+      items: state.mission.items.map((m) => ({
+        title: m.title || "",
+        description: m.description || "",
+        videoUrl: m.videoUrl || "",
+        formUrl: m.formUrl || ""
+      }))
+    }
   };
 }
 
@@ -961,6 +990,7 @@ document.addEventListener("DOMContentLoaded", function () {
   bindInput("f-flight-notice", state.flight, "notice");
   bindInput("f-bus-notice", state.bus, "notice");
   bindInput("f-rooms-notice", state.rooms, "notice");
+  bindInput("f-mission-notice", state.mission, "notice");
 
   renderStaffList();
   renderScheduleList();
@@ -972,6 +1002,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const renderRoomsList = () => renderGroupList(state.rooms, "rooms-list", "count-rooms", "방 번호", "1호");
   renderBusList();
   renderRoomsList();
+  renderMissionList();
+  const addMissionBtn = document.getElementById("add-mission");
+  if (addMissionBtn) addMissionBtn.addEventListener("click", () => {
+    state.mission.items.push({ title: "", description: "", videoUrl: "", formUrl: "" });
+    renderMissionList();
+    markDirty();
+  });
   document.getElementById("add-bus").addEventListener("click", () => {
     state.bus.groups.push({ label: (state.bus.groups.length + 1) + "호차", date: "", members: [] });
     renderBusList();

@@ -532,6 +532,10 @@ main {
 .flight-leg-label { font-size: 11.5px; font-weight: 700; color: var(--color-muted); }
 .flight-leg-main { font-size: 14px; font-weight: 700; }
 .lookup-label { font-size: 22px; font-weight: 800; color: var(--color-primary); }
+.mission-desc { white-space: pre-line; font-size: 14.5px; line-height: 1.6; margin-bottom: 12px; }
+.mission-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md, 12px); overflow: hidden; background: #000; margin-bottom: 12px; }
+.mission-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mission-video-link { display: block; text-align: center; margin-bottom: 12px; }
 .lookup-detail { font-size: 15px; font-weight: 700; margin-top: 2px; }
 .lookup-summary-row { display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-top: 1px solid var(--color-border, #e5e7eb); }
 .lookup-summary-row:first-of-type { border-top: 0; }

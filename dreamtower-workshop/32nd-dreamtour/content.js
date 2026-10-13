@@ -21,7 +21,8 @@ window.CONTENT = {
     "faq": true,
     "survey": true,
     "flight": false,
-    "location": false
+    "location": false,
+    "mission": true
   },
   "heroImage": "../../images/카멜리아힐 핑크뮬리.jpg",
   "heroTagline": "가을빛으로 물든 카멜리아힐",
@@ -188,5 +189,16 @@ window.CONTENT = {
     "formUrl": "",
     "notice": "",
     "records": []
+  },
+  "mission": {
+    "notice": "",
+    "items": [
+      {
+        "title": "바디레터 미션",
+        "description": "\"카바라\"를 한 글자씩 팀원들의 몸으로 표현하는 미션입니다.\n아래 참고 영상을 보고 팀원들과 함께 만들어주세요!",
+        "videoUrl": "https://youtu.be/AHYegKXDrKs",
+        "formUrl": ""
+      }
+    ]
   }
 };
