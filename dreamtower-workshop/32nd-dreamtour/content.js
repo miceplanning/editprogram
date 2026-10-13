@@ -197,7 +197,7 @@ window.CONTENT = {
         "title": "바디레터 미션",
         "description": "\"카바라\"를 한 글자씩 팀원들의 몸으로 표현하는 미션입니다.\n\n• 촬영 담당 1인을 제외한 팀원 전원이 글자 만들기에 참여해야 합니다.\n• 제한시간 40초 안에 모든 글자를 순서대로 연속해서 영상을 찍어 업로드 합니다.\n• 40초 이내의 영상을 대표자 한 명이 업로드 해주세요.",
         "videoUrl": "https://youtu.be/AHYegKXDrKs",
-        "formUrl": ""
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeU_A2K9LTMg0J9UUdSgnoe8Hf-WGUOiKC98jxhKQQW95rkbg/viewform"
       }
     ]
   }
