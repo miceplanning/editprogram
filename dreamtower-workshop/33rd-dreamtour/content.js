@@ -154,7 +154,7 @@ window.CONTENT = {
       "location": "청지목가든",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "버스가 **18시 30분 정각**에 출발합니다. 늦지 않게 버스로 돌아와주세요!",
+      "description": "",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
