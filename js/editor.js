@@ -37,6 +37,7 @@ function withDefaults(src) {
     heroImage: src.heroImage || "",
     heroTagline: src.heroTagline || "",
     heroBanner: !!src.heroBanner,
+    heroImagePosition: src.heroImagePosition || "",
     sectionsEnabled: Object.assign(
       { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, location: true },
       src.sectionsEnabled || {}
@@ -708,6 +709,7 @@ function buildExportObject() {
     heroImage: state.heroImage,
     heroTagline: state.heroTagline,
     heroBanner: !!state.heroBanner,
+    heroImagePosition: state.heroImagePosition || "",
     notice: { active: !!state.notice.active, text: state.notice.text },
     rainPlan: {
       hasIndoorAlternative: !!state.rainPlan.hasIndoorAlternative,

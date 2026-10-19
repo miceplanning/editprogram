@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---------------- 히어로 영역 ----------------
   const heroHtml =
     '<div class="hero' + (c.heroBanner ? " hero-banner" : "") + '">' +
-    '<img src="' + escapeHtml(c.heroImage) + '" alt="' + escapeHtml(c.eventName) + '" onerror="this.style.display=\'none\'" />' +
+    '<img src="' + escapeHtml(c.heroImage) + '" alt="' + escapeHtml(c.eventName) + '"' +
+    // heroImagePosition: 대표 사진이 잘릴 때 보여줄 위치 (예: "center 45%"), 비우면 기본값
+    (c.heroImagePosition ? ' style="object-position: ' + escapeHtml(c.heroImagePosition) + '"' : "") +
+    ' onerror="this.style.display=\'none\'" />' +
     '<div class="hero-text">' +
     '<span class="badge date">' + escapeHtml(c.dateDisplay || c.date) + "</span>" +
     "<h1>" + escapeHtml(c.eventName) + "</h1>" +
