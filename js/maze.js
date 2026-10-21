@@ -227,7 +227,9 @@
     const btn = document.getElementById("maze-draw-btn");
     btn.disabled = true;
     root.querySelectorAll("[data-team]").forEach((b) => (b.disabled = true));
-    const pick = mazes[Math.floor(Math.random() * mazes.length)];
+    // teamMazes 로 조별 미로가 정해져 있으면 뽑기 연출만 하고 결과는 배정된 미로로 나옵니다.
+    const assigned = cfg.teamMazes && mazeOf(cfg.teamMazes[state.team]);
+    const pick = assigned || mazes[Math.floor(Math.random() * mazes.length)];
     let i = 0, delay = 60;
     function spin() {
       const m = mazes[i++ % mazes.length];
@@ -540,6 +542,8 @@
     if (state.mazeKey && !mazeOf(state.mazeKey)) state = {};
     // 조 목록이 바뀌었는데 아직 타이머를 시작하지 않은 기록이면 처음부터 다시 고르게 합니다.
     if (state.team && !state.startAt && (cfg.teams || []).indexOf(state.team) === -1) state = {};
+    // 조별 미로 배정이 바뀌었는데 아직 시작 전이면 배정된 미로로 맞춥니다.
+    if (cfg.teamMazes && state.team && state.mazeKey && !state.startAt && cfg.teamMazes[state.team] !== state.mazeKey) delete state.mazeKey;
     render();
   });
 })();
