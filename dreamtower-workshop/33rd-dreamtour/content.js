@@ -22,7 +22,8 @@ window.CONTENT = {
     "survey": false,
     "flight": false,
     "location": false,
-    "mission": false
+    "mission": false,
+    "maze": true
   },
   "heroImage": "../../images/메이즈랜드 대표사진.jpeg",
   "heroBanner": false,
@@ -219,5 +220,82 @@ window.CONTENT = {
   "mission": {
     "notice": "",
     "items": []
+  },
+  "maze": {
+    "title": "삼다도 찾아 삼만리",
+    "notice": "",
+    "teams": [
+      "A조",
+      "B조",
+      "C조",
+      "D조",
+      "E조",
+      "F조",
+      "G조"
+    ],
+    "staffCode": "1029",
+    "draw": true,
+    "helpPhone": "064-784-3838",
+    "recognition": {
+      "threshold": 0.62,
+      "margin": 0.05
+    },
+    "mazes": [
+      {
+        "key": "stone",
+        "name": "돌미로",
+        "emoji": "🗿",
+        "character": "돌하르방 인형",
+        "difficulty": 3,
+        "length": "2.3km",
+        "timeLimitMin": 20,
+        "bonusMin": 5,
+        "story": "돌하르방이 여러분을 기다리고 있습니다.\n현무암 돌담 사이에 숨겨진 돌하르방 인형을 찾아서 함께 탈출하세요!",
+        "missions": [
+          "돌미로를 제한시간 안에 탈출한다.",
+          "아래 포토 스팟에서 촬영자를 제외한 팀원 전원 사진을 찍어주세요."
+        ],
+        "bonusRules": [
+          "돌하르방 인형을 찾아 사진을 찍으면 제한시간 5분이 추가됩니다.",
+          "돌하르방 인형은 조별 당 1개만 가져올 수 있습니다.",
+          "돌하르방 인형을 찾으면 인형과 함께 집결지로 와주세요."
+        ],
+        "photoSpotImage": "../../images/maze-photospot-stone.jpg",
+        "cautions": [
+          "돌담 위에 절대 올라가지 마세요!",
+          "미로 내에서 길을 잃으면 아래 번호로 전화하세요."
+        ],
+        "dollRefs": [
+          "../../images/maze-doll-harubang.jpg"
+        ]
+      },
+      {
+        "key": "woman",
+        "name": "여자미로",
+        "emoji": "🤿",
+        "character": "해녀 인형",
+        "difficulty": 2,
+        "length": "1.3km",
+        "timeLimitMin": 15,
+        "bonusMin": 5,
+        "story": "해녀가 물질을 마치고 집으로 돌아가는 길,\n동백꽃 향기 가득한 미로에서 해녀 인형을 찾아 함께 탈출하세요!",
+        "missions": [
+          "여자미로를 제한시간 안에 탈출한다.",
+          "아래 포토 스팟에서 촬영자를 제외한 팀원 전원 사진을 찍어주세요."
+        ],
+        "bonusRules": [
+          "해녀 인형을 찾아 사진을 찍으면 제한시간 5분이 추가됩니다.",
+          "해녀 인형은 조별 당 1개만 가져올 수 있습니다.",
+          "해녀 인형을 찾으면 인형과 함께 집결지로 와주세요."
+        ],
+        "photoSpotImage": "../../images/maze-photospot-woman.jpg",
+        "cautions": [
+          "미로 내에서 길을 잃으면 아래 번호로 전화하세요."
+        ],
+        "dollRefs": [
+          "../../images/maze-doll-haenyeo.jpg"
+        ]
+      }
+    ]
   }
 };

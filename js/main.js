@@ -111,6 +111,7 @@ function renderLayout(activePage) {
     { key: "flight", href: "flight.html", icon: "✈️", label: "항공권", sectionKey: "flight" },
     { key: "bus", href: "bus.html", icon: "🚌", label: "버스", sectionKey: "bus", optIn: true },
     { key: "mission", href: "mission.html", icon: "🎯", label: "팀미션", sectionKey: "mission", optIn: true },
+    { key: "maze", href: "maze.html", icon: "🧭", label: "미로미션", sectionKey: "maze", optIn: true },
     { key: "room", href: "room.html", icon: "🛏️", label: "객실", sectionKey: "rooms", optIn: true },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },
     { key: "vote", href: "vote.html", icon: "🗳️", label: "투표", show: hasVoteItems },

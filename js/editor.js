@@ -38,8 +38,9 @@ function withDefaults(src) {
     heroTagline: src.heroTagline || "",
     heroBanner: !!src.heroBanner,
     heroImagePosition: src.heroImagePosition || "",
+    maze: src.maze ? deepClone(src.maze) : null,
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, location: true },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -704,6 +705,7 @@ function buildExportObject() {
       bus: !!state.sectionsEnabled.bus,
       rooms: !!state.sectionsEnabled.rooms,
       mission: !!state.sectionsEnabled.mission,
+      maze: !!state.sectionsEnabled.maze,
       location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
@@ -793,7 +795,9 @@ function buildExportObject() {
         videoUrl: m.videoUrl || "",
         formUrl: m.formUrl || ""
       }))
-    }
+    },
+    // 미로 미션(maze) 설정은 편집기 화면이 없어 content.js에 있던 값을 그대로 보존합니다.
+    ...(state.maze ? { maze: state.maze } : {})
   };
 }
 
