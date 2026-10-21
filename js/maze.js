@@ -143,6 +143,37 @@
     });
   }
 
+  // ---------------- 페이지 안 확인창 ----------------
+  // 일부 앱 내 브라우저는 confirm/prompt 를 막아두기 때문에 직접 만든 확인창을 씁니다.
+  // onOk(box) 가 문자열을 돌려주면 그 문구를 오류로 보여주고 창을 닫지 않습니다.
+  function openModal(title, bodyHtml, onOk, okText) {
+    const wrap = document.createElement("div");
+    wrap.className = "maze-modal";
+    wrap.innerHTML =
+      '<div class="maze-modal-box">' +
+      '<div class="section-title">' + title + "</div>" +
+      bodyHtml +
+      '<p class="maze-hint maze-warn" data-err></p>' +
+      '<div class="maze-modal-actions"><button type="button" class="btn btn-outline" data-cancel>취소</button>' +
+      '<button type="button" class="btn btn-primary" data-ok>' + (okText || "확인") + "</button></div>" +
+      "</div>";
+    document.body.appendChild(wrap);
+    wrap.querySelector("[data-cancel]").addEventListener("click", () => wrap.remove());
+    wrap.querySelector("[data-ok]").addEventListener("click", () => {
+      const err = onOk(wrap);
+      if (typeof err === "string") { wrap.querySelector("[data-err]").textContent = err; return; }
+      wrap.remove();
+    });
+    return wrap;
+  }
+  function staffCodeInputHtml() {
+    return cfg.staffCode ? '<input type="password" inputmode="numeric" class="maze-code" data-code placeholder="스태프 코드" autocomplete="off" />' : "";
+  }
+  function staffCodeError(box) {
+    const code = box.querySelector("[data-code]");
+    return code && code.value.trim() !== String(cfg.staffCode) ? "스태프 코드가 맞지 않아요." : null;
+  }
+
   // ---------------- 화면 그리기 ----------------
   function render() {
     clearInterval(tickTimer);
@@ -181,7 +212,7 @@
     );
     root.querySelectorAll("[data-pick]").forEach((b) =>
       b.addEventListener("click", () => {
-        if (!state.team) return alert("먼저 조를 선택해주세요.");
+        if (!state.team) return openModal("👥 조 선택", '<p class="maze-hint">먼저 우리 조를 선택해주세요.</p>', () => null);
         state.mazeKey = b.dataset.pick; save(); render();
       })
     );
@@ -239,17 +270,18 @@
       '<div class="card maze-team-banner">' + escapeHtml(state.team) + " · " + escapeHtml(m.name) + "</div>" +
       '<div class="card">' +
       '<button type="button" class="btn btn-primary maze-big-btn" id="maze-start">🚩 입장! 타이머 시작</button>' +
-      '<p class="maze-hint">미로 입구에서 팀원 전원이 모이면 눌러주세요.</p>' +
+      '<p class="maze-hint">' + escapeHtml(cfg.startHint || "미로 입구에서 팀원 전원이 모이면 눌러주세요.") + "</p>" +
       '<p class="maze-hint" id="maze-model-status"></p>' +
       "</div>" +
       missionCardHtml(m) +
       staffResetHtml();
     document.getElementById("maze-start").addEventListener("click", () => {
-      if (!confirm(m.name + " 타이머를 시작할까요?")) return;
-      state.startAt = Date.now();
-      save();
-      vibrate(120);
-      render();
+      openModal("🚩 타이머 시작", '<p class="maze-hint">' + escapeHtml(state.team + " · " + m.name) + " 타이머를 시작할까요?<br>시작하면 멈출 수 없어요.</p>", () => {
+        state.startAt = Date.now();
+        save();
+        vibrate(120);
+        render();
+      }, "시작");
     });
     bindStaffReset();
     loadModel().catch(() => {});
@@ -465,16 +497,14 @@
     const b = document.getElementById("maze-reset");
     if (!b) return;
     b.addEventListener("click", () => {
-      if (cfg.staffCode) {
-        const v = prompt("스태프 코드를 입력하세요");
-        if (v === null) return;
-        if (v.trim() !== String(cfg.staffCode)) return alert("스태프 코드가 맞지 않아요.");
-      }
-      if (!confirm("이 휴대폰의 미로 미션 기록을 모두 지울까요?")) return;
-      state = {};
-      save();
-      releaseWakeLock();
-      render();
+      openModal("🧹 기록 초기화", '<p class="maze-hint">이 휴대폰의 미로 미션 기록을 모두 지웁니다.</p>' + staffCodeInputHtml(), (box) => {
+        const err = staffCodeError(box);
+        if (err) return err;
+        state = {};
+        save();
+        releaseWakeLock();
+        render();
+      }, "초기화");
     });
   }
 

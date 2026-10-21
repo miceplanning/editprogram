@@ -248,11 +248,11 @@ window.CONTENT = {
         "character": "돌하르방 인형",
         "difficulty": 3,
         "length": "2.3km",
-        "timeLimitMin": 20,
+        "timeLimitMin": 30,
         "bonusMin": 5,
         "story": "돌하르방이 여러분을 기다리고 있습니다.\n현무암 돌담 사이에 숨겨진 돌하르방 인형을 찾아서 함께 탈출하세요!",
         "missions": [
-          "돌미로를 제한시간 안에 탈출한다.",
+          "바람미로 입구에서 출발해 바람미로를 지나 돌미로를 제한시간 안에 탈출한다.",
           "아래 포토 스팟에서 촬영자를 제외한 팀원 전원 사진을 찍어주세요."
         ],
         "bonusRules": [
@@ -276,11 +276,11 @@ window.CONTENT = {
         "character": "해녀 인형",
         "difficulty": 2,
         "length": "1.3km",
-        "timeLimitMin": 15,
+        "timeLimitMin": 25,
         "bonusMin": 5,
         "story": "해녀가 물질을 마치고 집으로 돌아가는 길,\n동백꽃 향기 가득한 미로에서 해녀 인형을 찾아 함께 탈출하세요!",
         "missions": [
-          "여자미로를 제한시간 안에 탈출한다.",
+          "바람미로 입구에서 출발해 바람미로를 지나 여자미로를 제한시간 안에 탈출한다.",
           "아래 포토 스팟에서 촬영자를 제외한 팀원 전원 사진을 찍어주세요."
         ],
         "bonusRules": [
@@ -296,6 +296,7 @@ window.CONTENT = {
           "../../images/maze-doll-haenyeo.jpg"
         ]
       }
-    ]
+    ],
+    "startHint": "바람미로 입구에서 팀원 전원이 모이면 눌러주세요. 바람미로를 지나 뽑은 미로까지 탈출하는 시간입니다."
   }
 };
