@@ -19,7 +19,7 @@ window.CONTENT = {
     "meetingSummary": true,
     "checklist": false,
     "faq": true,
-    "survey": false,
+    "survey": true,
     "flight": false,
     "location": false,
     "mission": false,
@@ -209,7 +209,7 @@ window.CONTENT = {
     }
   ],
   "survey": {
-    "url": "",
+    "url": "https://forms.gle/UUBdPjvtvzum8hRw7",
     "duration": "약 3분"
   },
   "flight": {
