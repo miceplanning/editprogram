@@ -108,6 +108,7 @@ function renderLayout(activePage) {
   const tabs = [
     { key: "home", href: "index.html", icon: "🏠", label: "홈" },
     { key: "schedule", href: "schedule.html", icon: "🗓️", label: "일정" },
+    { key: "rsvp", href: "rsvp.html", icon: "📋", label: "참석조사", sectionKey: "rsvp", optIn: true },
     { key: "flight", href: "flight.html", icon: "✈️", label: "항공권", sectionKey: "flight" },
     { key: "bus", href: "bus.html", icon: "🚌", label: "버스", sectionKey: "bus", optIn: true },
     { key: "mission", href: "mission.html", icon: "🎯", label: "팀미션", sectionKey: "mission", optIn: true },

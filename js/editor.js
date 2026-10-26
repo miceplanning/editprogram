@@ -39,8 +39,9 @@ function withDefaults(src) {
     heroBanner: !!src.heroBanner,
     heroImagePosition: src.heroImagePosition || "",
     maze: src.maze ? deepClone(src.maze) : null,
+    rsvp: src.rsvp ? deepClone(src.rsvp) : null,
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, location: true },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, rsvp: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -706,6 +707,7 @@ function buildExportObject() {
       rooms: !!state.sectionsEnabled.rooms,
       mission: !!state.sectionsEnabled.mission,
       maze: !!state.sectionsEnabled.maze,
+      rsvp: !!state.sectionsEnabled.rsvp,
       location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
@@ -797,7 +799,9 @@ function buildExportObject() {
       }))
     },
     // 미로 미션(maze) 설정은 편집기 화면이 없어 content.js에 있던 값을 그대로 보존합니다.
-    ...(state.maze ? { maze: state.maze } : {})
+    ...(state.maze ? { maze: state.maze } : {}),
+    // 참석 조사(rsvp)도 편집기 화면이 없어 그대로 보존합니다.
+    ...(state.rsvp ? { rsvp: state.rsvp } : {})
   };
 }
 

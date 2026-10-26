@@ -21,7 +21,8 @@ window.CONTENT = {
     "faq": false,
     "survey": false,
     "flight": false,
-    "location": false
+    "location": false,
+    "rsvp": true
   },
   "heroImage": "../../images/경희대 ai기술경영학과.jpg",
   "heroTagline": "AI기술경영학과 동계 워크숍 (2박 3일)",
@@ -347,5 +348,12 @@ window.CONTENT = {
     "formUrl": "",
     "notice": "",
     "records": []
+  },
+  "rsvp": {
+    "title": "동계 워크숍 참석 조사",
+    "description": "동계 워크숍(2박 3일) 참석 여부와 참석 가능 일자, 숙박 여부를 알려주세요.",
+    "url": "https://forms.gle/R7PkpmKDYNco5ARf8",
+    "deadline": "",
+    "duration": ""
   }
 };

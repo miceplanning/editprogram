@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hasVoteItems = !!(c.schedule && c.schedule.some((s) => s.voteUrl));
   const quickMenuItems = [
     '<a href="schedule.html"><span class="icon">🗓️</span>일정</a>',
+    (c.sectionsEnabled && c.sectionsEnabled.rsvp === true) ? '<a href="rsvp.html"><span class="icon">📋</span>참석조사</a>' : "",
     sectionOn("flight") ? '<a href="flight.html"><span class="icon">✈️</span>항공권</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.bus === true) ? '<a href="bus.html"><span class="icon">🚌</span>버스</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.mission === true) ? '<a href="mission.html"><span class="icon">🎯</span>팀미션</a>' : "",
@@ -153,6 +154,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "</div>";
   }
 
+  // ---------------- 참석 조사 유도 (행사 전 참석 여부 조사) ----------------
+  let rsvpHtml = "";
+  if (c.rsvp && c.rsvp.url && c.sectionsEnabled && c.sectionsEnabled.rsvp === true) {
+    rsvpHtml =
+      '<div class="card" style="text-align:center;">' +
+      '<div class="section-title" style="justify-content:center;">📋 ' + escapeHtml(c.rsvp.title || "참석 조사") + "에 응답해주세요</div>" +
+      (c.rsvp.deadline ? '<p style="font-size:13px; color:var(--color-muted); margin-bottom:12px;">응답 마감: ' + escapeHtml(c.rsvp.deadline) + "</p>" : "") +
+      '<a class="btn btn-accent" href="rsvp.html">참석 조사 응답하기</a>' +
+      "</div>";
+  }
+
   // ---------------- 설문조사 유도 ----------------
   let surveyHtml = "";
   if (c.survey && sectionOn("survey")) {
@@ -165,5 +177,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   root.innerHTML =
-    heroHtml + quickMenuHtml + meetingHtml + timelineHtml + rainHtml + checklistHtml + staffHtml + surveyHtml;
+    heroHtml + quickMenuHtml + rsvpHtml + meetingHtml + timelineHtml + rainHtml + checklistHtml + staffHtml + surveyHtml;
 });
