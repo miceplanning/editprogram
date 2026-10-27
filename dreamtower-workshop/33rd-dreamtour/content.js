@@ -302,7 +302,7 @@ window.CONTENT = {
       "B조": "woman",
       "C조": "woman",
       "D조": "stone",
-      "E조": "woman",
+      "E조": "stone",
       "F조": "woman"
     }
   }
