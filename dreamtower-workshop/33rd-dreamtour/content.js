@@ -230,8 +230,7 @@ window.CONTENT = {
       "C조",
       "D조",
       "E조",
-      "F조",
-      "G조"
+      "F조"
     ],
     "staffCode": "1029",
     "draw": true,
@@ -304,8 +303,7 @@ window.CONTENT = {
       "C조": "woman",
       "D조": "stone",
       "E조": "woman",
-      "F조": "woman",
-      "G조": "stone"
+      "F조": "woman"
     }
   }
 };
