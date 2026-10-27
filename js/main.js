@@ -79,7 +79,7 @@ function renderLayout(activePage) {
     '<div class="brand">' + escapeHtml(c.eventName) +
     "<small>" + escapeHtml(c.dateDisplay || c.date || "") + "</small>" +
     "</div>" +
-    (c.contact
+    (c.contact && c.contact.phone
       ? '<a class="header-contact" href="' + telHref(c.contact.phone) + '">📞 ' + escapeHtml(c.contact.name) + "</a>"
       : "") +
     "</div>";
@@ -87,8 +87,8 @@ function renderLayout(activePage) {
   // 공지 배너보다 위에 오면 순서가 꼬이므로, 배너 뒤에 헤더가 오도록 재정렬
   if (noticeEl.parentElement) body.insertBefore(noticeEl, header);
 
-  // --- 3) 플로팅 연락처 버튼 (항상 화면에 노출) ---
-  if (c.contact) {
+  // --- 3) 플로팅 연락처 버튼 (전화번호가 있으면 항상 화면에 노출) ---
+  if (c.contact && c.contact.phone) {
     const floating = document.createElement("a");
     floating.id = "floating-contact";
     floating.href = telHref(c.contact.phone);
@@ -114,6 +114,7 @@ function renderLayout(activePage) {
     { key: "mission", href: "mission.html", icon: "🎯", label: "팀미션", sectionKey: "mission", optIn: true },
     { key: "maze", href: "maze.html", icon: "🧭", label: "미로미션", sectionKey: "maze", optIn: true },
     { key: "room", href: "room.html", icon: "🛏️", label: "객실", sectionKey: "rooms", optIn: true },
+    { key: "seating", href: "seating.html", icon: "🪑", label: "배치도", sectionKey: "seating", optIn: true },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },
     { key: "vote", href: "vote.html", icon: "🗳️", label: "투표", show: hasVoteItems },
     { key: "location", href: "location.html", icon: "🗺️", label: "오시는길", sectionKey: "location" },

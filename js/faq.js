@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .join("");
 
   // 담당자 연락 카드
-  if (c.contact) {
+  if (c.contact && c.contact.phone) {
     const contactCard = document.createElement("div");
     contactCard.className = "card";
     contactCard.style.textAlign = "center";

@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (c.sectionsEnabled && c.sectionsEnabled.mission === true) ? '<a href="mission.html"><span class="icon">🎯</span>팀미션</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.maze === true) ? '<a href="maze.html"><span class="icon">🧭</span>미로미션</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.rooms === true) ? '<a href="room.html"><span class="icon">🛏️</span>객실</a>' : "",
+    (c.sectionsEnabled && c.sectionsEnabled.seating === true) ? '<a href="seating.html"><span class="icon">🪑</span>배치도</a>' : "",
     hasUploadItems ? '<a href="upload.html"><span class="icon">📸</span>사진업로드</a>' : "",
     hasVoteItems ? '<a href="vote.html"><span class="icon">🗳️</span>투표</a>' : "",
     sectionOn("location") ? '<a href="location.html"><span class="icon">🗺️</span>오시는길</a>' : "",

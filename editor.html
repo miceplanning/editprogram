@@ -352,7 +352,18 @@
   <!-- 참가자 사진 업로드 미리보기용 (구글폼/드라이브 링크 헬퍼) -->
   <script src="js/photo-upload.js"></script>
 
-  <script src="js/content.js"></script>
+  <!--
+    기본은 루트 js/content.js 를 불러옵니다.
+    행사 폴더의 content.js 를 편집하려면 주소 뒤에 ?content=<행사 폴더>/content.js 를 붙이세요.
+    예: editor.html?content=korea-forest-service/2026-forestry-workshop/content.js
+  -->
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search).get("content");
+      var ok = p && /^[A-Za-z0-9_\-\/]+\/content\.js$/.test(p) && p.indexOf("..") === -1;
+      document.write('<script src="' + (ok ? p : "js/content.js") + '"><\/script>');
+    })();
+  </script>
   <script src="js/project-store.js"></script>
   <script src="js/editor.js"></script>
 </body>
