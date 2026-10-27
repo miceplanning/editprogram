@@ -458,6 +458,7 @@ window.CONTENT = {
   },
   "rooms": {
     "notice": "성함을 검색하면 강동리조트 패밀리콘도 객실 번호를 확인하실 수 있습니다. ",
+    "emptyText": "준비중",
     "groups": []
   },
   "mission": {

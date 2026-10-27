@@ -63,7 +63,7 @@ function withDefaults(src) {
       records: src.flight && src.flight.records ? deepClone(src.flight.records) : []
     }),
     bus: { notice: (src.bus && src.bus.notice) || "", groups: src.bus && src.bus.groups ? deepClone(src.bus.groups) : [] },
-    rooms: { notice: (src.rooms && src.rooms.notice) || "", groups: src.rooms && src.rooms.groups ? deepClone(src.rooms.groups) : [] },
+    rooms: { notice: (src.rooms && src.rooms.notice) || "", emptyText: (src.rooms && src.rooms.emptyText) || "", groups: src.rooms && src.rooms.groups ? deepClone(src.rooms.groups) : [] },
     mission: { notice: (src.mission && src.mission.notice) || "", items: src.mission && src.mission.items ? deepClone(src.mission.items) : [] }
   };
 }
@@ -678,6 +678,8 @@ function renderMissionList() {
 function exportGroups(target) {
   return {
     notice: target.notice || "",
+    // emptyText(명단이 없을 때 문구)는 편집기 화면이 없어 값이 있을 때만 그대로 보존합니다.
+    ...(target.emptyText ? { emptyText: target.emptyText } : {}),
     groups: target.groups.map((g) => ({
       label: g.label || "",
       date: g.date || "",

@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     rootId: "room-content",
     data: window.CONTENT.rooms,
     searchTitle: "🔍 내 객실 조회",
-    emptyText: "아직 등록된 객실 배정 명단이 없습니다. 준비되는 대로 이 페이지에서 조회하실 수 있어요."
+    // content.js 의 rooms.emptyText 가 있으면 그 문구를, 없으면 기본 문구를 보여줍니다.
+    emptyText: (window.CONTENT.rooms && window.CONTENT.rooms.emptyText) || "아직 등록된 객실 배정 명단이 없습니다. 준비되는 대로 이 페이지에서 조회하실 수 있어요."
   });
 });
