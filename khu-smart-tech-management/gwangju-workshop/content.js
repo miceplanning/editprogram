@@ -21,10 +21,18 @@ window.CONTENT = {
     "faq": false,
     "survey": false,
     "flight": false,
+    "bus": false,
+    "rooms": false,
+    "mission": false,
+    "maze": false,
+    "rsvp": false,
+    "seating": false,
     "location": false
   },
   "heroImage": "../../images/경희대 스마트기술경영학과.jpg",
   "heroTagline": "스마트기술경영학과 세미나 워크숍 (1박 2일)",
+  "heroBanner": false,
+  "heroImagePosition": "",
   "notice": {
     "active": false,
     "text": ""
@@ -35,9 +43,9 @@ window.CONTENT = {
     "decisionTime": ""
   },
   "contact": {
-    "name": "이나연",
+    "name": "한승덕",
     "role": "담당자",
-    "phone": "010-2560-1508"
+    "phone": "010-2858-0072"
   },
   "staff": [],
   "meetingSummary": {
@@ -51,11 +59,11 @@ window.CONTENT = {
       "date": "2026-11-05",
       "time": "18:00",
       "endTime": "20:00",
-      "title": "저녁식사 (교수님)",
+      "title": "저녁식사",
       "location": "",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "오리탕",
+      "description": "",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
@@ -101,7 +109,7 @@ window.CONTENT = {
       "endTime": "13:30",
       "title": "점심식사",
       "location": "담원",
-      "mapUrl": "",
+      "mapUrl": "https://maps.app.goo.gl/53osCbisixz1sFG9A",
       "voteUrl": "",
       "description": "게장정식",
       "travelTimeToNext": null,
@@ -148,8 +156,8 @@ window.CONTENT = {
       "time": "18:00",
       "endTime": "20:00",
       "title": "저녁식사",
-      "location": "황솔촌",
-      "mapUrl": "",
+      "location": "황솔촌(충장점)",
+      "mapUrl": "https://maps.app.goo.gl/9k3YNsMvkWY6vXLTA",
       "voteUrl": "",
       "description": "숯불갈비",
       "travelTimeToNext": null,
@@ -196,7 +204,7 @@ window.CONTENT = {
       "time": "07:30",
       "endTime": "08:30",
       "title": "조식",
-      "location": "호텔",
+      "location": "ACC 디자인호텔 11F 숙수",
       "mapUrl": "",
       "voteUrl": "",
       "description": "",
@@ -323,5 +331,17 @@ window.CONTENT = {
     "formUrl": "",
     "notice": "",
     "records": []
+  },
+  "bus": {
+    "notice": "",
+    "groups": []
+  },
+  "rooms": {
+    "notice": "",
+    "groups": []
+  },
+  "mission": {
+    "notice": "",
+    "items": []
   }
 };
