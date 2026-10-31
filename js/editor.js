@@ -41,6 +41,7 @@ function withDefaults(src) {
     maze: src.maze ? deepClone(src.maze) : null,
     rsvp: src.rsvp ? deepClone(src.rsvp) : null,
     seating: src.seating ? deepClone(src.seating) : null,
+    meetingSummaryExtra: src.meetingSummaryExtra ? deepClone(src.meetingSummaryExtra) : null,
     sectionsEnabled: Object.assign(
       { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, rsvp: false, seating: false, location: true },
       src.sectionsEnabled || {}
@@ -729,8 +730,12 @@ function buildExportObject() {
     meetingSummary: {
       time: state.meetingSummary.time,
       location: state.meetingSummary.location,
-      mapUrl: state.meetingSummary.mapUrl
+      mapUrl: state.meetingSummary.mapUrl,
+      ...(state.meetingSummary.label ? { label: state.meetingSummary.label } : {}),
+      ...(state.meetingSummary.note ? { note: state.meetingSummary.note } : {})
     },
+    // 추가 집결 정보(meetingSummaryExtra)는 편집기 화면이 없어 그대로 보존합니다.
+    ...(state.meetingSummaryExtra ? { meetingSummaryExtra: state.meetingSummaryExtra } : {}),
     schedule: state.schedule.map((it, idx) => ({
       id: idx + 1,
       date: it.date || "",
