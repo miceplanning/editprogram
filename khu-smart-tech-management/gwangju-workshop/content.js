@@ -32,7 +32,7 @@ window.CONTENT = {
   "heroImage": "../../images/경희대-스마트-메인사진.jpeg",
   "heroTagline": "스마트기술경영학과 세미나 워크숍 (1박 2일)",
   "heroBanner": false,
-  "heroImagePosition": "",
+  "heroImagePosition": "center 40%",
   "notice": {
     "active": false,
     "text": ""
