@@ -60,16 +60,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---------------- 집결 정보 요약 카드 ----------------
   let meetingHtml = "";
   if (c.meetingSummary && sectionOn("meetingSummary")) {
+    // meetingSummaryExtra: 이동수단별로 집결지가 여러 곳일 때 추가 집결 정보 (예: 버스 + KTX)
+    // 각 항목 { label, time, location, mapUrl, note } — label/note 는 선택
+    const meetings = [c.meetingSummary].concat(c.meetingSummaryExtra || []);
     meetingHtml =
       '<div class="card">' +
       '<div class="section-title">📍 집결 정보</div>' +
-      '<div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px;">' +
-      '<div>' +
-      '<div style="font-weight:800; font-size:16px;">' + escapeHtml(c.meetingSummary.time) + "</div>" +
-      '<div style="font-size:13px; color:var(--color-muted);">' + escapeHtml(c.meetingSummary.location) + "</div>" +
-      "</div>" +
-      mapButtonHtml(c.meetingSummary.mapUrl, "집결지 지도") +
-      "</div>" +
+      meetings
+        .map(
+          (m) =>
+            '<div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px;">' +
+            "<div>" +
+            (m.label ? '<div style="font-size:13px; font-weight:700; color:var(--color-primary);">' + escapeHtml(m.label) + "</div>" : "") +
+            '<div style="font-weight:800; font-size:16px;">' + escapeHtml(m.time) + "</div>" +
+            '<div style="font-size:13px; color:var(--color-muted);">' + escapeHtml(m.location) + "</div>" +
+            (m.note ? '<div style="font-size:13px; margin-top:4px; white-space:pre-line;">' + escapeHtml(m.note) + "</div>" : "") +
+            "</div>" +
+            '<div style="flex-shrink:0; white-space:nowrap;">' + mapButtonHtml(m.mapUrl, "집결지 지도") + "</div>" +
+            "</div>"
+        )
+        .join("") +
       "</div>";
   }
 

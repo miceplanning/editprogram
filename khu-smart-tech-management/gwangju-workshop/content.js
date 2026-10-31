@@ -49,10 +49,20 @@ window.CONTENT = {
   },
   "staff": [],
   "meetingSummary": {
+    "label": "🚌 버스",
     "time": "08:30",
     "location": "경희대 수원캠퍼스 외국어대학관",
     "mapUrl": "https://maps.app.goo.gl/vtBM8tXYYRbdsAAS7"
   },
+  "meetingSummaryExtra": [
+    {
+      "label": "🚄 KTX",
+      "time": "12:20",
+      "location": "광주송정역",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%EC%86%A1%EC%A0%95%EC%97%AD",
+      "note": "'테크노경영대학원' 피켓을 찾아주세요"
+    }
+  ],
   "schedule": [
     {
       "id": 1,
