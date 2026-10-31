@@ -32,7 +32,7 @@ window.CONTENT = {
   "heroImage": "../../images/khu-smart-gwangju-main.jpg",
   "heroTagline": "스마트기술경영학과 세미나 워크숍 (1박 2일)",
   "heroBanner": false,
-  "heroImagePosition": "center 30%",
+  "heroImagePosition": "center 20%",
   "notice": {
     "active": false,
     "text": ""
