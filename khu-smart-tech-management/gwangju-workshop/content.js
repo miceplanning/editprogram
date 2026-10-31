@@ -48,6 +48,30 @@ window.CONTENT = {
   "schedule": [
     {
       "id": 1,
+      "date": "2026-11-05",
+      "time": "18:00",
+      "endTime": "20:00",
+      "title": "저녁식사 (교수님)",
+      "location": "",
+      "mapUrl": "",
+      "voteUrl": "",
+      "description": "오리탕",
+      "travelTimeToNext": null,
+      "difficulty": null,
+      "distance": null,
+      "meal": null,
+      "freeTimeRecommendation": null,
+      "photo": null,
+      "photoUpload": {
+        "enabled": false,
+        "formUrl": "",
+        "driveFolderUrl": "",
+        "description": "",
+        "showGallery": false
+      }
+    },
+    {
+      "id": 2,
       "date": "2026-11-06",
       "time": "08:30",
       "endTime": "12:30",
@@ -71,15 +95,15 @@ window.CONTENT = {
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "date": "2026-11-06",
       "time": "12:30",
       "endTime": "13:30",
       "title": "점심식사",
-      "location": "광주시내",
+      "location": "담원",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "",
+      "description": "게장정식",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
@@ -95,7 +119,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 3,
+      "id": 4,
       "date": "2026-11-06",
       "time": "13:30",
       "endTime": "18:00",
@@ -119,15 +143,15 @@ window.CONTENT = {
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "date": "2026-11-06",
       "time": "18:00",
       "endTime": "20:00",
       "title": "저녁식사",
-      "location": "",
+      "location": "황솔촌",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "",
+      "description": "숯불갈비",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
@@ -143,7 +167,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "date": "2026-11-06",
       "time": "20:00",
       "endTime": "20:30",
@@ -167,7 +191,31 @@ window.CONTENT = {
       }
     },
     {
-      "id": 6,
+      "id": 7,
+      "date": "2026-11-07",
+      "time": "07:30",
+      "endTime": "08:30",
+      "title": "조식",
+      "location": "호텔",
+      "mapUrl": "",
+      "voteUrl": "",
+      "description": "",
+      "travelTimeToNext": null,
+      "difficulty": null,
+      "distance": null,
+      "meal": null,
+      "freeTimeRecommendation": null,
+      "photo": null,
+      "photoUpload": {
+        "enabled": false,
+        "formUrl": "",
+        "driveFolderUrl": "",
+        "description": "",
+        "showGallery": false
+      }
+    },
+    {
+      "id": 8,
       "date": "2026-11-07",
       "time": "09:00",
       "endTime": "12:00",
@@ -191,15 +239,15 @@ window.CONTENT = {
       }
     },
     {
-      "id": 7,
+      "id": 9,
       "date": "2026-11-07",
       "time": "12:00",
       "endTime": "13:00",
       "title": "점심식사",
-      "location": "",
+      "location": "호텔 내 식당",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "",
+      "description": "보리굴비정식",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
@@ -215,7 +263,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 8,
+      "id": 10,
       "date": "2026-11-07",
       "time": "13:00",
       "endTime": "16:30",
@@ -239,7 +287,7 @@ window.CONTENT = {
       }
     },
     {
-      "id": 9,
+      "id": 11,
       "date": "2026-11-07",
       "time": "16:30",
       "endTime": "17:00",
