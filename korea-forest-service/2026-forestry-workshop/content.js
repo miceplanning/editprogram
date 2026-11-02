@@ -64,7 +64,7 @@ window.CONTENT = {
       "location": "그랜드볼룸 (패밀리콘도 1층)",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "등록데스크에서 명찰을 받아주세요. 짐은 등록데스크 옆 보관 장소에 맡기실 수 있습니다.",
+      "description": "등록데스크에서 명찰을 받아주세요. 짐은 행사장 입구에 보관하실 수 있습니다.",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
