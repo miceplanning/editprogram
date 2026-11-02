@@ -113,6 +113,7 @@ function renderLayout(activePage) {
     { key: "bus", href: "bus.html", icon: "🚌", label: "버스", sectionKey: "bus", optIn: true },
     { key: "mission", href: "mission.html", icon: "🎯", label: "팀미션", sectionKey: "mission", optIn: true },
     { key: "maze", href: "maze.html", icon: "🧭", label: "미로미션", sectionKey: "maze", optIn: true },
+    { key: "table", href: "table.html", icon: "🍽️", label: "테이블", sectionKey: "tables", optIn: true },
     { key: "room", href: "room.html", icon: "🛏️", label: "객실", sectionKey: "rooms", optIn: true },
     { key: "seating", href: "seating.html", icon: "🪑", label: "배치도", sectionKey: "seating", optIn: true },
     { key: "upload", href: "upload.html", icon: "📸", label: "사진업로드", show: hasUploadItems },

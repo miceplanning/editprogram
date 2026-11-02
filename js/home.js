@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (c.sectionsEnabled && c.sectionsEnabled.bus === true) ? '<a href="bus.html"><span class="icon">🚌</span>버스</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.mission === true) ? '<a href="mission.html"><span class="icon">🎯</span>팀미션</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.maze === true) ? '<a href="maze.html"><span class="icon">🧭</span>미로미션</a>' : "",
+    (c.sectionsEnabled && c.sectionsEnabled.tables === true) ? '<a href="table.html"><span class="icon">🍽️</span>테이블</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.rooms === true) ? '<a href="room.html"><span class="icon">🛏️</span>객실</a>' : "",
     (c.sectionsEnabled && c.sectionsEnabled.seating === true) ? '<a href="seating.html"><span class="icon">🪑</span>배치도</a>' : "",
     hasUploadItems ? '<a href="upload.html"><span class="icon">📸</span>사진업로드</a>' : "",

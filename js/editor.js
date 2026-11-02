@@ -42,8 +42,9 @@ function withDefaults(src) {
     rsvp: src.rsvp ? deepClone(src.rsvp) : null,
     seating: src.seating ? deepClone(src.seating) : null,
     meetingSummaryExtra: src.meetingSummaryExtra ? deepClone(src.meetingSummaryExtra) : null,
+    tables: src.tables ? deepClone(src.tables) : null,
     sectionsEnabled: Object.assign(
-      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, rsvp: false, seating: false, location: true },
+      { rainPlan: true, staff: true, meetingSummary: true, checklist: true, faq: true, survey: true, flight: false, bus: false, rooms: false, mission: false, maze: false, rsvp: false, seating: false, tables: false, location: true },
       src.sectionsEnabled || {}
     ),
     notice: Object.assign({ active: false, text: "" }, src.notice || {}),
@@ -713,6 +714,7 @@ function buildExportObject() {
       maze: !!state.sectionsEnabled.maze,
       rsvp: !!state.sectionsEnabled.rsvp,
       seating: !!state.sectionsEnabled.seating,
+      tables: !!state.sectionsEnabled.tables,
       location: !!state.sectionsEnabled.location
     },
     heroImage: state.heroImage,
@@ -812,7 +814,9 @@ function buildExportObject() {
     // 참석 조사(rsvp)도 편집기 화면이 없어 그대로 보존합니다.
     ...(state.rsvp ? { rsvp: state.rsvp } : {}),
     // 테이블 배치도(seating)도 편집기 화면이 없어 그대로 보존합니다.
-    ...(state.seating ? { seating: state.seating } : {})
+    ...(state.seating ? { seating: state.seating } : {}),
+    // 테이블 번호 조회(tables)도 편집기 화면이 없어 그대로 보존합니다.
+    ...(state.tables ? { tables: state.tables } : {})
   };
 }
 
