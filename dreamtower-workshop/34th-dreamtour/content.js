@@ -100,7 +100,7 @@ window.CONTENT = {
       "id": 3,
       "date": "2026-11-12",
       "time": "15:40",
-      "endTime": "16:40",
+      "endTime": "16:50",
       "title": "2부. 실내 팀별 레크리에이션",
       "location": "꺼멍목장",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=%EA%BA%BC%EB%A9%8D%EB%AA%A9%EC%9E%A5",
@@ -123,8 +123,8 @@ window.CONTENT = {
     {
       "id": 4,
       "date": "2026-11-12",
-      "time": "16:40",
-      "endTime": "18:10",
+      "time": "17:00",
+      "endTime": "18:30",
       "title": "저녁 식사",
       "location": "꺼멍목장",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=%EA%BA%BC%EB%A9%8D%EB%AA%A9%EC%9E%A5",
@@ -147,7 +147,7 @@ window.CONTENT = {
     {
       "id": 5,
       "date": "2026-11-12",
-      "time": "19:10",
+      "time": "19:30",
       "endTime": null,
       "title": "드림타워 도착 및 해산",
       "location": "드림타워 주차장",
