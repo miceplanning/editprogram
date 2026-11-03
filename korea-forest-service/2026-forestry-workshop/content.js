@@ -27,7 +27,7 @@ window.CONTENT = {
     "maze": false,
     "rsvp": false,
     "seating": false,
-    "tables": true,
+    "tables": false,
     "location": false
   },
   "heroImage": "../../images/강동리조트-전경.jpg",
@@ -352,7 +352,7 @@ window.CONTENT = {
       "location": "그랜드볼룸",
       "mapUrl": "",
       "voteUrl": "",
-      "description": "테이블 번호는 하단 '테이블' 탭에서 성함으로 조회하실 수 있습니다.",
+      "description": "",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
