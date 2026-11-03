@@ -11,6 +11,8 @@
      members 의 각 항목은 "이름" 또는 "이름 (메모)" 형태로 적으면 됩니다.
      예: "한영숙 (2일차 제외)" — 조회 결과에 메모까지 그대로 보여줍니다.
   ✅ 한 사람이 여러 그룹에 들어 있으면(예: 1박째·2박째 방이 다름) 전부 보여줍니다.
+  ✅ data.showMates 가 true 이면 조회 결과에 같은 그룹의 다른 사람(예: 객실 메이트)도 보여줍니다.
+     메이트는 메모의 첫 항목과 이름으로 표시됩니다. 예: "박수진 (남부지방산림청 · 공무직)" → "남부지방산림청 박수진"
   =====================================================================
 */
 
@@ -65,6 +67,13 @@ function renderGroupLookup(opts) {
     return member.replace(/\s*\(.*\)\s*$/, "").trim();
   }
 
+  // 메이트 표시용: "이름 (소속 · 직급)" → "소속 이름", 메모가 없으면 이름만
+  function mateLabel(member) {
+    const memo = member.match(/\((.*)\)\s*$/);
+    const org = memo ? memo[1].split("·")[0].trim() : "";
+    return (org ? org + " " : "") + baseName(member);
+  }
+
   function renderResults(query) {
     const q = query.trim();
     if (!q) {
@@ -97,12 +106,20 @@ function renderGroupLookup(opts) {
           p.rows
             .map((x) => {
               const memo = x.member.match(/\((.*)\)\s*$/);
+              const mates = data.showMates
+                ? (x.group.members || []).map((m) => String(m).trim()).filter((m) => m !== x.member)
+                : [];
               return (
                 '<div class="flight-leg">' +
                 (x.group.date ? '<div class="flight-leg-label">' + escapeHtml(x.group.date) + "</div>" : "") +
                 '<div class="lookup-label">' + escapeHtml(x.group.label) + "</div>" +
                 (x.group.detail ? '<div class="lookup-detail">' + escapeHtml(x.group.detail) + "</div>" : "") +
                 (memo ? '<div class="flight-leg-sub">' + escapeHtml(memo[1]) + "</div>" : "") +
+                (mates.length
+                  ? '<div class="lookup-mates"><div class="lookup-mates-title">' + escapeHtml(opts.matesTitle || "함께하는 분") + "</div>" +
+                    mates.map((m) => '<div class="lookup-mate">' + escapeHtml(mateLabel(m)) + "</div>").join("") +
+                    "</div>"
+                  : "") +
                 "</div>"
               );
             })
