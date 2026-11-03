@@ -24,7 +24,8 @@ window.CONTENT = {
     "location": false,
     "mission": true
   },
-  "heroImage": "../../images/제주 대표 .jpeg",
+  "heroImage": "../../images/중문 귤따기 대표사진.jpg",
+  "heroImagePosition": "center 45%",
   "heroTagline": "귤밭에서 흑돼지 한상까지",
   "notice": {
     "active": false,
@@ -134,7 +135,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "../../images/꺼멍목장 돼지 한상.jpg",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
