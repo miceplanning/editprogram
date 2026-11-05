@@ -73,7 +73,7 @@ window.CONTENT = {
       "location": "경희대 수원캠퍼스 외국어대학관",
       "mapUrl": "https://maps.app.goo.gl/vtBM8tXYYRbdsAAS7",
       "voteUrl": "",
-      "description": "중간 휴게소 경유 예정입니다!",
+      "description": "아침식사(샌드위치)가 제공될 예정입니다.\n중간 휴게소 경유 예정입니다!",
       "travelTimeToNext": null,
       "difficulty": null,
       "distance": null,
