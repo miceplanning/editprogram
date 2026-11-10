@@ -197,7 +197,7 @@ window.CONTENT = {
       {
         "title": "바디레터 미션",
         "description": "현장에서 안내하는 단어를 한 글자씩 팀원들의 몸으로 표현하는 미션입니다.\n\n• 촬영 담당 1인을 제외한 팀원 전원이 글자 만들기에 참여해야 합니다.\n• 완성된 사진(또는 영상)을 대표자 한 명이 업로드 해주세요.",
-        "videoUrl": "",
+        "videoUrl": "https://youtu.be/AHYegKXDrKs",
         "formUrl": "https://forms.gle/CRkTzZh4RF3FastA7"
       }
     ]
