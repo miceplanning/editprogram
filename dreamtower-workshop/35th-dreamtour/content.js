@@ -87,7 +87,7 @@ window.CONTENT = {
       "distance": null,
       "meal": null,
       "freeTimeRecommendation": null,
-      "photo": null,
+      "photo": "../../images/노형슈퍼마켙 .webp",
       "photoUpload": {
         "enabled": false,
         "formUrl": "",
@@ -183,7 +183,7 @@ window.CONTENT = {
     }
   ],
   "survey": {
-    "url": "https://forms.gle/xjx8BuuqRpQCzy6X6",
+    "url": "https://forms.gle/pMin1QdmJEkJpFnY8",
     "duration": "약 3분"
   },
   "flight": {
