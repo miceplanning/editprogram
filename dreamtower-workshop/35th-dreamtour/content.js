@@ -26,7 +26,7 @@ window.CONTENT = {
   },
   "heroImage": "../../images/34회차 대표사진(요가).jpeg",
   "heroImagePosition": "center 65%",
-  "heroTagline": "제주를 담는 릴스, 숲속에서 쉬는 요가",
+  "heroTagline": "몸은 가볍게, 마음은 편안하게",
   "notice": {
     "active": false,
     "text": ""
