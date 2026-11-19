@@ -22,7 +22,7 @@ window.CONTENT = {
     "survey": false,
     "flight": false,
     "location": false,
-    "rsvp": true
+    "rsvp": false
   },
   "heroImage": "../../images/경희대 ai기술경영학과.jpg",
   "heroTagline": "AI기술경영학과 동계 워크숍 (2박 3일)",
