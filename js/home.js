@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             (m.note ? '<div style="font-size:13px; margin-top:4px; white-space:pre-line;">' + escapeHtml(m.note) + "</div>" : "") +
             "</div>" +
             '<div style="flex-shrink:0; white-space:nowrap;">' + mapButtonHtml(m.mapUrl, "집결지 지도") + "</div>" +
-            "</div>"
+            "</div>" +
+            // photo(선택): 집결 위치를 표시한 지도 캡처 등
+            (m.photo ? '<img src="' + escapeHtml(m.photo) + '" alt="집결 위치" onerror="this.remove()" style="display:block; width:100%; border-radius:10px; margin:-2px 0 12px;" />' : "")
         )
         .join("") +
       "</div>";

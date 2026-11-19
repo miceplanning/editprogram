@@ -736,7 +736,8 @@ function buildExportObject() {
       location: state.meetingSummary.location,
       mapUrl: state.meetingSummary.mapUrl,
       ...(state.meetingSummary.label ? { label: state.meetingSummary.label } : {}),
-      ...(state.meetingSummary.note ? { note: state.meetingSummary.note } : {})
+      ...(state.meetingSummary.note ? { note: state.meetingSummary.note } : {}),
+      ...(state.meetingSummary.photo ? { photo: state.meetingSummary.photo } : {})
     },
     // 추가 집결 정보(meetingSummaryExtra)는 편집기 화면이 없어 그대로 보존합니다.
     ...(state.meetingSummaryExtra ? { meetingSummaryExtra: state.meetingSummaryExtra } : {}),
